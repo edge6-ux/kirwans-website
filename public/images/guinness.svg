@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#122A1E"/>
+      <stop offset="100%" stop-color="#0D1F18"/>
+    </radialGradient>
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1A3A2A" stop-opacity="0.9"/>
+      <stop offset="15%" stop-color="#2A5A3A" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#3A7A4A" stop-opacity="0.4"/>
+      <stop offset="85%" stop-color="#2A5A3A" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#1A3A2A" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="stoutGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0A0A08"/>
+      <stop offset="30%" stop-color="#1A140A"/>
+      <stop offset="70%" stop-color="#1A140A"/>
+      <stop offset="100%" stop-color="#0A0A08"/>
+    </linearGradient>
+    <linearGradient id="headGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="40%" stop-color="#F0EDE8"/>
+      <stop offset="100%" stop-color="#D8D0C0"/>
+    </linearGradient>
+    <radialGradient id="glowBehind" cx="50%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#CC8A2A" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0D1F18" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glassShadow">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.7"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+
+  <!-- Subtle glow behind glass -->
+  <ellipse cx="400" cy="320" rx="200" ry="280" fill="url(#glowBehind)"/>
+
+  <!-- Bar surface suggestion -->
+  <rect x="0" y="490" width="800" height="110" fill="#1A1008" opacity="0.6"/>
+  <rect x="0" y="490" width="800" height="3" fill="#C9A86A" opacity="0.25"/>
+
+  <!-- Glass shadow on bar -->
+  <ellipse cx="400" cy="492" rx="80" ry="12" fill="#000000" opacity="0.5"/>
+
+  <!-- Pint glass shape — classic Irish pint (tulip/imperial) profile -->
+  <!-- Glass body as path: narrows at base, flares to top -->
+  <path d="M 325 488 L 308 200 Q 307 180 340 172 L 460 172 Q 493 180 492 200 L 475 488 Z"
+        fill="url(#stoutGrad)" filter="url(#glassShadow)"/>
+
+  <!-- Glass walls (semi-transparent overlay for glass effect) -->
+  <!-- Left glass highlight -->
+  <path d="M 325 488 L 308 200 Q 307 182 330 174 L 340 172 L 318 490 Z"
+        fill="url(#glassGrad)" opacity="0.6"/>
+  <!-- Right glass highlight -->
+  <path d="M 475 488 L 492 200 Q 493 182 470 174 L 460 172 L 482 490 Z"
+        fill="url(#glassGrad)" opacity="0.6"/>
+
+  <!-- Inner glass highlight strip (center shine) -->
+  <path d="M 390 175 L 382 488 L 400 488 L 410 175 Z" fill="#FFFFFF" opacity="0.04"/>
+
+  <!-- Stout liquid — very dark brown/black fill inside glass -->
+  <!-- (The stoutGrad on the main glass body serves as liquid; adding subtle carbonation) -->
+
+  <!-- Settling effect (lighter brown band near bottom) -->
+  <path d="M 350 460 L 348 440 L 452 440 L 450 460 Z" fill="#2A1A08" opacity="0.5"/>
+  <path d="M 355 430 L 353 410 L 447 410 L 445 430 Z" fill="#1E1408" opacity="0.3"/>
+
+  <!-- Creamy white head -->
+  <path d="M 308 200 Q 307 180 340 172 L 460 172 Q 493 180 492 200 L 490 225 Q 465 218 440 222 Q 420 226 400 224 Q 380 222 360 226 Q 335 230 310 225 Z"
+        fill="url(#headGrad)"/>
+
+  <!-- Head texture (small bubbles) -->
+  <circle cx="340" cy="195" r="4" fill="#FFFFFF" opacity="0.6"/>
+  <circle cx="360" cy="188" r="3" fill="#FFFFFF" opacity="0.5"/>
+  <circle cx="385" cy="183" r="5" fill="#FFFFFF" opacity="0.65"/>
+  <circle cx="410" cy="181" r="4" fill="#FFFFFF" opacity="0.55"/>
+  <circle cx="432" cy="184" r="3" fill="#FFFFFF" opacity="0.5"/>
+  <circle cx="455" cy="192" r="4" fill="#FFFFFF" opacity="0.6"/>
+  <circle cx="350" cy="210" r="3" fill="#F0E8D8" opacity="0.4"/>
+  <circle cx="400" cy="214" r="3.5" fill="#F0E8D8" opacity="0.4"/>
+  <circle cx="445" cy="208" r="3" fill="#F0E8D8" opacity="0.4"/>
+
+  <!-- Glass rim highlight at top -->
+  <ellipse cx="400" cy="172" rx="60" ry="7" fill="none" stroke="#6A9A7A" stroke-width="2.5" opacity="0.5"/>
+  <ellipse cx="400" cy="172" rx="60" ry="7" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.15"/>
+
+  <!-- Glass base/foot -->
+  <rect x="318" y="488" width="164" height="12" rx="4" fill="#0A0A08"/>
+  <rect x="310" y="498" width="180" height="8" rx="4" fill="#141410"/>
+  <rect x="305" y="504" width="190" height="6" rx="3" fill="#1A1810"/>
+  <!-- Base highlight -->
+  <rect x="310" y="500" width="80" height="2" rx="1" fill="#3A3A30" opacity="0.4"/>
+
+  <!-- Condensation drops on glass -->
+  <circle cx="336" cy="350" r="2.5" fill="#FFFFFF" opacity="0.12"/>
+  <circle cx="332" cy="370" r="2" fill="#FFFFFF" opacity="0.1"/>
+  <circle cx="465" cy="320" r="2.5" fill="#FFFFFF" opacity="0.12"/>
+  <circle cx="468" cy="345" r="2" fill="#FFFFFF" opacity="0.1"/>
+
+  <!-- Label on glass (harp/brand suggestion) -->
+  <text x="400" y="360" font-family="Georgia, serif" font-size="13" fill="#C9A86A"
+        text-anchor="middle" letter-spacing="2" opacity="0.35">GUINNESS</text>
+
+  <!-- Decorative rules -->
+  <line x1="220" y1="545" x2="340" y2="545" stroke="#C9A86A" stroke-width="1" opacity="0.4"/>
+  <line x1="460" y1="545" x2="580" y2="545" stroke="#C9A86A" stroke-width="1" opacity="0.4"/>
+  <circle cx="400" cy="545" r="3" fill="#C9A86A" opacity="0.4"/>
+
+  <!-- Label -->
+  <rect x="240" y="555" width="320" height="40" rx="4" fill="#122A1E" opacity="0.92"/>
+  <rect x="240" y="555" width="320" height="40" rx="4" fill="none" stroke="#C9A86A" stroke-width="1.2" opacity="0.6"/>
+  <text x="400" y="581" font-family="Georgia, 'Times New Roman', serif" font-size="20"
+        fill="#C9A86A" text-anchor="middle" letter-spacing="7" font-weight="bold">GUINNESS</text>
+</svg>

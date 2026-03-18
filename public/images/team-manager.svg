@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#1A3028"/>
+      <stop offset="100%" stop-color="#0D1F18"/>
+    </radialGradient>
+    <radialGradient id="silhouetteGrad" cx="45%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#1E3A2A"/>
+      <stop offset="100%" stop-color="#0D2018"/>
+    </radialGradient>
+    <radialGradient id="glowRad" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#C9A86A" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#C9A86A" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="circle400">
+      <circle cx="200" cy="200" r="190"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#bgGrad)"/>
+
+  <!-- Circle portrait background -->
+  <circle cx="200" cy="200" r="185" fill="#122A1E"/>
+  <circle cx="200" cy="200" r="185" fill="none" stroke="#C9A86A" stroke-width="3" opacity="0.7"/>
+  <circle cx="200" cy="200" r="178" fill="none" stroke="#C9A86A" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Subtle glow -->
+  <circle cx="200" cy="200" r="185" fill="url(#glowRad)"/>
+
+  <!-- Female silhouette (head + shoulders) clipped to circle -->
+  <g clip-path="url(#circle400)">
+    <!-- Shoulders / blouse -->
+    <path d="M 60 400 Q 80 340 120 315 Q 148 300 168 292 Q 186 285 200 285 Q 214 285 232 292 Q 252 300 280 315 Q 320 340 340 400 Z"
+          fill="url(#silhouetteGrad)"/>
+    <!-- Collar / neckline -->
+    <path d="M 168 292 Q 180 302 200 305 Q 220 302 232 292 L 230 310 Q 215 320 200 322 Q 185 320 170 310 Z"
+          fill="#0D2018"/>
+    <!-- Neck -->
+    <rect x="186" y="248" width="28" height="45" rx="10" fill="url(#silhouetteGrad)"/>
+    <!-- Head -->
+    <ellipse cx="200" cy="210" rx="68" ry="78" fill="url(#silhouetteGrad)"/>
+    <!-- Hair (flowing, longer - female) -->
+    <path d="M 132 195 Q 130 150 142 130 Q 155 108 175 100 Q 190 94 200 93 Q 210 94 225 100 Q 245 108 258 130 Q 270 150 268 195"
+          fill="#0A1A10" stroke="none"/>
+    <!-- Hair sides flowing down -->
+    <path d="M 132 195 Q 125 240 128 285 Q 135 305 145 315" fill="#0A1A10" stroke="none"/>
+    <path d="M 268 195 Q 275 240 272 285 Q 265 305 255 315" fill="#0A1A10" stroke="none"/>
+    <!-- Hair part highlight -->
+    <path d="M 200 93 Q 196 110 194 135" stroke="#1A2A1A" stroke-width="2" fill="none" opacity="0.4"/>
+  </g>
+
+  <!-- Subtle inner shadow at bottom of circle -->
+  <path d="M 15 250 Q 15 385 200 385 Q 385 385 385 250" fill="#0D1F18" opacity="0.25"/>
+
+  <!-- Label bar at bottom -->
+  <rect x="60" y="330" width="280" height="44" rx="4" fill="#0D1F18" opacity="0.88"/>
+  <rect x="60" y="330" width="280" height="44" rx="4" fill="none" stroke="#C9A86A" stroke-width="1.5" opacity="0.65"/>
+  <text x="200" y="358" font-family="Georgia, 'Times New Roman', serif" font-size="20"
+        fill="#C9A86A" text-anchor="middle" letter-spacing="6" font-weight="bold">MANAGER</text>
+</svg>

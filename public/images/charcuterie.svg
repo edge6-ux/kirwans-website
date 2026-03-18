@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#1A1808"/>
+      <stop offset="100%" stop-color="#0D1F18"/>
+    </radialGradient>
+    <radialGradient id="boardGrad" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#7A4E20"/>
+      <stop offset="50%" stop-color="#5C3A14"/>
+      <stop offset="100%" stop-color="#3E2608"/>
+    </radialGradient>
+    <radialGradient id="cheeseGrad" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#E8C868"/>
+      <stop offset="100%" stop-color="#C8A038"/>
+    </radialGradient>
+    <radialGradient id="lightGlow" cx="50%" cy="20%" r="55%">
+      <stop offset="0%" stop-color="#E8A830" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#0D1F18" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="boardShadow">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000000" flood-opacity="0.65"/>
+    </filter>
+  </defs>
+
+  <!-- Background: dark surface -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+
+  <!-- Overhead light -->
+  <ellipse cx="400" cy="80" rx="400" ry="260" fill="url(#lightGlow)"/>
+
+  <!-- Board shadow -->
+  <ellipse cx="400" cy="420" rx="310" ry="24" fill="#000000" opacity="0.5"/>
+
+  <!-- Wooden serving board (wide, slightly rounded rect) -->
+  <rect x="80" y="160" width="640" height="260" rx="24" fill="url(#boardGrad)" filter="url(#boardShadow)"/>
+
+  <!-- Wood grain lines on board -->
+  <g opacity="0.2" stroke="#3A2208" stroke-width="1.5">
+    <line x1="88" y1="200" x2="712" y2="200"/>
+    <line x1="85" y1="230" x2="715" y2="228"/>
+    <line x1="82" y1="260" x2="718" y2="258"/>
+    <line x1="84" y1="290" x2="716" y2="292"/>
+    <line x1="86" y1="320" x2="714" y2="322"/>
+    <line x1="88" y1="350" x2="712" y2="352"/>
+    <line x1="90" y1="382" x2="710" y2="380"/>
+  </g>
+  <!-- Board highlight strip -->
+  <rect x="80" y="160" width="640" height="12" rx="8" fill="#9A6828" opacity="0.3"/>
+
+  <!-- Board handle suggestion (left) -->
+  <rect x="30" y="270" width="58" height="40" rx="20" fill="#5C3A14"/>
+  <rect x="30" y="270" width="58" height="40" rx="20" fill="none" stroke="#3E2608" stroke-width="1.5"/>
+  <ellipse cx="49" cy="290" rx="8" ry="5" fill="#6A4820" opacity="0.5"/>
+
+  <!-- ITEMS ON BOARD -->
+
+  <!-- Cheese wedge 1 (hard cheese, yellow) -->
+  <path d="M 140 230 L 180 200 L 240 205 L 240 270 L 140 270 Z" fill="url(#cheeseGrad)"/>
+  <path d="M 140 230 L 180 200 L 240 205" stroke="#C8A038" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <!-- Cheese rind -->
+  <path d="M 140 230 L 140 270 L 240 270 L 240 205" stroke="#A88028" stroke-width="2.5" fill="none" opacity="0.55"/>
+  <!-- Cheese holes -->
+  <circle cx="185" cy="238" r="5" fill="#B89028" opacity="0.5"/>
+  <circle cx="210" cy="252" r="4" fill="#B89028" opacity="0.5"/>
+
+  <!-- Cheese wedge 2 (soft white brie type) -->
+  <path d="M 265 195 L 340 190 Q 355 195 360 210 L 355 260 L 262 255 Z" fill="#F0E8D0" opacity="0.85"/>
+  <path d="M 265 195 L 340 190 Q 355 195 360 210" stroke="#D8D0B8" stroke-width="2" fill="none" opacity="0.5"/>
+  <!-- Brie rind (darker edge) -->
+  <path d="M 265 195 L 262 255 L 355 260 L 360 210" stroke="#C8B898" stroke-width="3" fill="none" opacity="0.4"/>
+
+  <!-- Cured meat slices (rolled / folded - circles with overlap) -->
+  <g opacity="0.85">
+    <ellipse cx="430" cy="215" rx="32" ry="22" fill="#8A2A18" transform="rotate(-15, 430, 215)"/>
+    <ellipse cx="455" cy="210" rx="32" ry="22" fill="#A03020" transform="rotate(-10, 455, 210)"/>
+    <ellipse cx="480" cy="218" rx="32" ry="22" fill="#8A2A18" transform="rotate(-5, 480, 218)"/>
+    <ellipse cx="505" cy="212" rx="30" ry="20" fill="#703018" transform="rotate(5, 505, 212)"/>
+    <!-- Meat texture lines -->
+    <line x1="418" y1="208" x2="440" y2="222" stroke="#6A1A08" stroke-width="1.5" opacity="0.4" transform="rotate(-15, 430, 215)"/>
+    <line x1="445" y1="204" x2="465" y2="218" stroke="#7A2010" stroke-width="1.5" opacity="0.4" transform="rotate(-10, 455, 210)"/>
+  </g>
+
+  <!-- Second row of meat -->
+  <g opacity="0.8">
+    <ellipse cx="440" cy="248" rx="30" ry="20" fill="#7A2018" transform="rotate(10, 440, 248)"/>
+    <ellipse cx="464" cy="242" rx="30" ry="20" fill="#902818" transform="rotate(5, 464, 242)"/>
+    <ellipse cx="488" cy="250" rx="28" ry="18" fill="#7A2018" transform="rotate(-8, 488, 250)"/>
+  </g>
+
+  <!-- Cornichons / small pickles (tiny dark green ovals) -->
+  <ellipse cx="560" cy="220" rx="10" ry="22" fill="#2E5A1A" transform="rotate(-20, 560, 220)"/>
+  <ellipse cx="578" cy="215" rx="10" ry="22" fill="#3A6A22" transform="rotate(-10, 578, 215)"/>
+  <ellipse cx="596" cy="222" rx="10" ry="22" fill="#2E5A1A" transform="rotate(5, 596, 222)"/>
+
+  <!-- Crackers / oatcakes (beige rectangles) -->
+  <rect x="580" y="260" width="55" height="40" rx="4" fill="#D4B870" opacity="0.8"/>
+  <rect x="580" y="260" width="55" height="40" rx="4" fill="none" stroke="#B89040" stroke-width="1.5" opacity="0.4"/>
+  <!-- Cracker texture dots -->
+  <circle cx="596" cy="275" r="2" fill="#B89040" opacity="0.4"/>
+  <circle cx="608" cy="280" r="2" fill="#B89040" opacity="0.4"/>
+  <circle cx="620" cy="271" r="2" fill="#B89040" opacity="0.4"/>
+
+  <rect x="620" y="252" width="50" height="38" rx="4" fill="#C8A860" opacity="0.8" transform="rotate(8, 645, 271)"/>
+  <rect x="620" y="252" width="50" height="38" rx="4" fill="none" stroke="#A88840" stroke-width="1.5" opacity="0.4" transform="rotate(8, 645, 271)"/>
+
+  <!-- Small red grapes (dark red circles) -->
+  <circle cx="160" cy="320" r="10" fill="#4A1828"/>
+  <circle cx="176" cy="314" r="10" fill="#5A2030"/>
+  <circle cx="192" cy="322" r="10" fill="#4A1828"/>
+  <circle cx="178" cy="330" r="10" fill="#5A2030"/>
+  <circle cx="162" cy="334" r="9" fill="#4A1828"/>
+  <!-- Grape stem -->
+  <path d="M 176 304 Q 174 298 178 294" stroke="#5A3810" stroke-width="2" fill="none" opacity="0.6"/>
+
+  <!-- Honey drizzle -->
+  <path d="M 310 290 Q 335 285 360 292 Q 375 298 370 310" stroke="#D4A020" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.55"/>
+
+  <!-- Nuts (small ovals) -->
+  <ellipse cx="500" cy="310" rx="8" ry="12" fill="#8A6030" transform="rotate(20, 500, 310)"/>
+  <ellipse cx="518" cy="305" rx="8" ry="12" fill="#A07038" transform="rotate(-10, 518, 305)"/>
+  <ellipse cx="536" cy="315" rx="8" ry="12" fill="#8A6030" transform="rotate(30, 536, 315)"/>
+
+  <!-- Label -->
+  <rect x="130" y="530" width="540" height="48" rx="4" fill="#122A1E" opacity="0.92"/>
+  <rect x="130" y="530" width="540" height="48" rx="4" fill="none" stroke="#C9A86A" stroke-width="1.2" opacity="0.6"/>
+  <text x="400" y="562" font-family="Georgia, 'Times New Roman', serif" font-size="19"
+        fill="#C9A86A" text-anchor="middle" letter-spacing="4" font-weight="bold">CHARCUTERIE OF IRELAND</text>
+</svg>

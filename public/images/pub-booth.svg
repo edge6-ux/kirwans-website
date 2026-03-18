@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="#1A2A1A"/>
+      <stop offset="100%" stop-color="#0D1F18"/>
+    </radialGradient>
+    <radialGradient id="candleGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#E8A830" stop-opacity="0.75"/>
+      <stop offset="40%" stop-color="#CC7818" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#CC8A2A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="boothBackGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2E1A08"/>
+      <stop offset="100%" stop-color="#180E04"/>
+    </linearGradient>
+    <linearGradient id="tableGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5A3818"/>
+      <stop offset="100%" stop-color="#2E1A08"/>
+    </linearGradient>
+    <linearGradient id="seatGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2A1A0A"/>
+      <stop offset="100%" stop-color="#160C04"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <!-- Background wall -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+
+  <!-- Wall panelling lines -->
+  <g opacity="0.1">
+    <rect x="0" y="80" width="800" height="2" fill="#3D2B1A"/>
+    <rect x="0" y="160" width="800" height="1.5" fill="#3D2B1A"/>
+    <rect x="0" y="240" width="800" height="2" fill="#2C1F10"/>
+    <rect x="0" y="320" width="800" height="1.5" fill="#3D2B1A"/>
+  </g>
+
+  <!-- Candle glow radiating from table center -->
+  <ellipse cx="400" cy="370" rx="320" ry="260" fill="url(#candleGlow)"/>
+
+  <!-- Booth back wall / backing (left panel) -->
+  <rect x="0" y="80" width="200" height="480" fill="#0E1A10" opacity="0.6"/>
+
+  <!-- Booth back wall / backing (right panel) -->
+  <rect x="600" y="80" width="200" height="480" fill="#0E1A10" opacity="0.6"/>
+
+  <!-- Left booth back seat cushion backing -->
+  <rect x="30" y="140" width="170" height="300" rx="8" fill="url(#boothBackGrad)"/>
+  <rect x="35" y="145" width="160" height="8" rx="4" fill="#3A2010" opacity="0.5"/>
+
+  <!-- Right booth back seat cushion backing -->
+  <rect x="600" y="140" width="170" height="300" rx="8" fill="url(#boothBackGrad)"/>
+  <rect x="605" y="145" width="160" height="8" rx="4" fill="#3A2010" opacity="0.5"/>
+
+  <!-- Left booth seat (horizontal base) -->
+  <rect x="20" y="440" width="200" height="55" rx="6" fill="url(#seatGrad)" filter="url(#softShadow)"/>
+  <rect x="20" y="440" width="200" height="10" rx="5" fill="#3A2010" opacity="0.4"/>
+
+  <!-- Right booth seat -->
+  <rect x="580" y="440" width="200" height="55" rx="6" fill="url(#seatGrad)" filter="url(#softShadow)"/>
+  <rect x="580" y="440" width="200" height="10" rx="5" fill="#3A2010" opacity="0.4"/>
+
+  <!-- Booth table -->
+  <rect x="210" y="390" width="380" height="22" rx="8" fill="url(#tableGrad)" filter="url(#softShadow)"/>
+  <rect x="212" y="393" width="376" height="8" rx="4" fill="#8A5828" opacity="0.3"/>
+  <!-- Table legs -->
+  <rect x="252" y="410" width="14" height="80" rx="5" fill="#2A1808"/>
+  <rect x="534" y="410" width="14" height="80" rx="5" fill="#2A1808"/>
+  <!-- Table base stretcher -->
+  <rect x="240" y="480" width="320" height="8" rx="4" fill="#1E1008" opacity="0.7"/>
+
+  <!-- Candle on table (center) -->
+  <rect x="393" y="338" width="14" height="54" rx="3" fill="#E8E0C8"/>
+  <ellipse cx="400" cy="338" rx="7" ry="3.5" fill="#D8D0B8"/>
+  <!-- Wick -->
+  <line x1="400" y1="338" x2="400" y2="330" stroke="#3A2010" stroke-width="1.5" opacity="0.8"/>
+  <!-- Flame -->
+  <ellipse cx="400" cy="323" rx="5" ry="9" fill="#E8A830" opacity="0.95" filter="url(#glow)"/>
+  <ellipse cx="400" cy="320" rx="2.5" ry="5" fill="#FFFFFF" opacity="0.85"/>
+  <!-- Candle glow halo close range -->
+  <ellipse cx="400" cy="328" rx="40" ry="36" fill="#E8A830" opacity="0.14"/>
+
+  <!-- Candle holder (small ring) -->
+  <ellipse cx="400" cy="392" rx="14" ry="5" fill="#3A2010"/>
+
+  <!-- Wine glasses on table -->
+  <g opacity="0.6" fill="#2A4A3A" stroke="#4A7A5A" stroke-width="1.2">
+    <!-- Glass left -->
+    <path d="M 302 358 Q 298 378 310 383 L 315 383 Q 327 378 323 358 Q 319 346 312 346 Q 305 346 302 358 Z"/>
+    <rect x="309" y="383" width="6" height="14" rx="1"/>
+    <rect x="303" y="396" width="18" height="4" rx="1"/>
+    <!-- Glass right -->
+    <path d="M 477 355 Q 473 375 485 380 L 490 380 Q 502 375 498 355 Q 494 343 487 343 Q 480 343 477 355 Z"/>
+    <rect x="484" y="380" width="6" height="14" rx="1"/>
+    <rect x="478" y="393" width="18" height="4" rx="1"/>
+  </g>
+
+  <!-- Small flower / decor on table -->
+  <circle cx="360" cy="380" r="5" fill="#C9A86A" opacity="0.4"/>
+  <circle cx="440" cy="378" r="5" fill="#C9A86A" opacity="0.4"/>
+
+  <!-- Framed picture on back wall (center) -->
+  <rect x="310" y="100" width="180" height="130" rx="3" fill="#0A1A10" stroke="#C9A86A" stroke-width="1.5" opacity="0.5"/>
+  <rect x="318" y="108" width="164" height="114" rx="2" fill="#0D1F18" stroke="#8A7D6E" stroke-width="1" opacity="0.35"/>
+
+  <!-- Wall panel left frame -->
+  <rect x="40" y="200" width="140" height="180" rx="3" fill="none" stroke="#5C3D1A" stroke-width="1.5" opacity="0.35"/>
+  <!-- Wall panel right frame -->
+  <rect x="620" y="200" width="140" height="180" rx="3" fill="none" stroke="#5C3D1A" stroke-width="1.5" opacity="0.35"/>
+
+  <!-- Floor -->
+  <rect x="0" y="495" width="800" height="105" fill="#0A1408" opacity="0.5"/>
+  <rect x="0" y="495" width="800" height="2" fill="#1A2A1A" opacity="0.4"/>
+
+  <!-- Decorative top border -->
+  <rect x="0" y="0" width="800" height="4" fill="#C9A86A" opacity="0.4"/>
+
+  <!-- Label -->
+  <rect x="240" y="540" width="320" height="44" rx="4" fill="#0D1F18" opacity="0.9"/>
+  <rect x="240" y="540" width="320" height="44" rx="4" fill="none" stroke="#C9A86A" stroke-width="1.2" opacity="0.6"/>
+  <text x="400" y="568" font-family="Georgia, 'Times New Roman', serif" font-size="20"
+        fill="#C9A86A" text-anchor="middle" letter-spacing="5" font-weight="bold">COZY BOOTHS</text>
+</svg>

@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Black + Gold + Emerald palette ── */
+  --color-black-base:      #0B0B0C;   /* primary background          */
+  --color-black-surface:   #111214;   /* card / section surface      */
+  --color-border-subtle:   #1C1C1E;   /* subtle dividers             */
+  --color-gold:            #C9A86A;   /* primary accent              */
+  --color-gold-light:      #D9C08A;   /* hover / lighter gold        */
+  --color-emerald:         #0F5F3F;   /* deep Irish green            */
+  --color-emerald-light:   #1FAF6B;   /* hover / active glow         */
+  --color-text-primary:    #F5F5F5;   /* headings + body text        */
+  --color-text-secondary:  #C7C7C7;   /* secondary / muted text      */
+
+  /* Legacy aliases kept for SectionWrapper bg map */
+  --color-dark-bg:         #0B0B0C;
+  --color-pub-green:       #111214;
+  --color-pub-green-light: #0F5F3F;
+
+  /* Typography */
+  --font-sans:  var(--font-inter), "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-playfair), "Cormorant Garamond", Georgia, "Times New Roman", serif;
+}
+
+:root {
+  --background: #0B0B0C;
+  --foreground: #F5F5F5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0B0B0C; }
+::-webkit-scrollbar-thumb { background: #C9A86A; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #D9C08A; }
+
+/* Selection */
+::selection {
+  background-color: #C9A86A;
+  color: #0B0B0C;
+}
+
+/* Gold divider utility */
+.brass-divider {
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #C9A86A, transparent);
+  margin: 0 auto 1rem;
+}
+
+/* Section label utility */
+.section-label {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #C9A86A;
+}
+
+/* Gold box-shadow utility */
+.shadow-gold {
+  box-shadow: 0 0 24px rgba(201, 168, 106, 0.25);
+}
+
+/* Emerald box-shadow utility */
+.shadow-emerald {
+  box-shadow: 0 0 24px rgba(15, 95, 63, 0.35);
+}
+
+/* Hide scrollbar while preserving scroll behaviour */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+/* Ken Burns effect for hero */
+@keyframes kenBurns {
+  0%   { transform: scale(1)    translateX(0)    translateY(0); }
+  50%  { transform: scale(1.05) translateX(-1%)  translateY(-1%); }
+  100% { transform: scale(1)    translateX(0)    translateY(0); }
+}
+
+.animate-ken-burns {
+  animation: kenBurns 20s ease-in-out infinite;
+}

@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <radialGradient id="bgGrad" cx="55%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#1A2A1A"/>
+      <stop offset="100%" stop-color="#0D1F18"/>
+    </radialGradient>
+    <radialGradient id="candle1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E8A830" stop-opacity="0.8"/>
+      <stop offset="35%" stop-color="#CC7818" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#CC8A2A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="candle2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E8A830" stop-opacity="0.75"/>
+      <stop offset="35%" stop-color="#CC7818" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#CC8A2A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="candle3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E8A830" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#CC8A2A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="boothSeatGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2E1A0A"/>
+      <stop offset="100%" stop-color="#1A0E05"/>
+    </linearGradient>
+    <linearGradient id="tableGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4A2E12"/>
+      <stop offset="100%" stop-color="#2A1A08"/>
+    </linearGradient>
+    <linearGradient id="wallGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#122A1E"/>
+      <stop offset="100%" stop-color="#0D1F18"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background wall -->
+  <rect width="1200" height="800" fill="url(#wallGrad)"/>
+
+  <!-- Wall wood panelling horizontal grooves -->
+  <g opacity="0.12">
+    <rect x="0" y="80" width="1200" height="2" fill="#3D2B1A"/>
+    <rect x="0" y="160" width="1200" height="2" fill="#3D2B1A"/>
+    <rect x="0" y="240" width="1200" height="2" fill="#2C1F10"/>
+    <rect x="0" y="320" width="1200" height="2" fill="#3D2B1A"/>
+    <rect x="0" y="400" width="1200" height="2" fill="#3D2B1A"/>
+  </g>
+
+  <!-- Ambient candle glows (placed at table positions) -->
+  <ellipse cx="340" cy="420" rx="260" ry="220" fill="url(#candle1)"/>
+  <ellipse cx="760" cy="380" rx="240" ry="200" fill="url(#candle2)"/>
+  <ellipse cx="1050" cy="440" rx="200" ry="180" fill="url(#candle3)"/>
+
+  <!-- Framed picture on wall (left) -->
+  <rect x="80" y="60" width="160" height="210" rx="3" fill="#0A1A10" stroke="#C9A86A" stroke-width="2" opacity="0.6"/>
+  <rect x="88" y="68" width="144" height="194" rx="2" fill="#0D1F18" stroke="#8A7D6E" stroke-width="1" opacity="0.5"/>
+  <!-- Abstract landscape in frame -->
+  <rect x="88" y="200" width="144" height="62" rx="0" fill="#1A3020" opacity="0.5"/>
+  <ellipse cx="160" cy="160" rx="40" ry="50" fill="#122A1E" opacity="0.4"/>
+
+  <!-- Framed picture on wall (right) -->
+  <rect x="960" y="50" width="180" height="220" rx="3" fill="#0A1A10" stroke="#C9A86A" stroke-width="2" opacity="0.6"/>
+  <rect x="968" y="58" width="164" height="204" rx="2" fill="#0D1F18" stroke="#8A7D6E" stroke-width="1" opacity="0.5"/>
+
+  <!-- Decorative wall sconce (left) -->
+  <line x1="300" y1="50" x2="300" y2="130" stroke="#8A7D6E" stroke-width="2" opacity="0.5"/>
+  <path d="M 285 130 Q 285 115 300 112 Q 315 115 315 130 L 312 148 Q 306 154 300 154 Q 294 154 288 148 Z" fill="#2A1A08" stroke="#C9A86A" stroke-width="1.5" opacity="0.7"/>
+  <ellipse cx="300" cy="154" rx="12" ry="4" fill="#3A2A10" opacity="0.7"/>
+
+  <!-- Decorative wall sconce (right) -->
+  <line x1="900" y1="50" x2="900" y2="130" stroke="#8A7D6E" stroke-width="2" opacity="0.5"/>
+  <path d="M 885 130 Q 885 115 900 112 Q 915 115 915 130 L 912 148 Q 906 154 900 154 Q 894 154 888 148 Z" fill="#2A1A08" stroke="#C9A86A" stroke-width="1.5" opacity="0.7"/>
+  <ellipse cx="900" cy="154" rx="12" ry="4" fill="#3A2A10" opacity="0.7"/>
+
+  <!-- Booth Back 1 (left booth, back cushion/wall) -->
+  <rect x="80" y="340" width="480" height="180" rx="10" fill="url(#boothSeatGrad)" stroke="#2A1808" stroke-width="2"/>
+  <!-- Booth back cushion detail -->
+  <rect x="90" y="345" width="460" height="8" rx="4" fill="#3A2010" opacity="0.5"/>
+  <!-- Booth seat 1 -->
+  <rect x="80" y="518" width="480" height="55" rx="6" fill="#2A1808"/>
+  <rect x="80" y="518" width="480" height="8" rx="4" fill="#3A2010" opacity="0.5"/>
+
+  <!-- Table 1 (left) -->
+  <rect x="220" y="510" width="200" height="18" rx="5" fill="url(#tableGrad)" filter=""/>
+  <rect x="222" y="512" width="196" height="6" rx="3" fill="#6A4020" opacity="0.4"/>
+  <!-- Table legs -->
+  <rect x="248" y="528" width="10" height="40" rx="3" fill="#2A1808"/>
+  <rect x="396" y="528" width="10" height="40" rx="3" fill="#2A1808"/>
+
+  <!-- Candle on Table 1 -->
+  <rect x="313" y="478" width="14" height="36" rx="3" fill="#E8E0C8"/>
+  <ellipse cx="320" cy="478" rx="7" ry="3" fill="#D8D0B8"/>
+  <!-- Flame 1 -->
+  <ellipse cx="320" cy="472" rx="4" ry="7" fill="#E8A830" opacity="0.9" filter="url(#glow)"/>
+  <ellipse cx="320" cy="470" rx="2" ry="4" fill="#FFFFFF" opacity="0.8"/>
+  <!-- Candle glow ring -->
+  <ellipse cx="320" cy="475" rx="32" ry="28" fill="#E8A830" opacity="0.12"/>
+
+  <!-- Wine glasses on table 1 -->
+  <g opacity="0.55" fill="#3A5A4A" stroke="#4A7A5A" stroke-width="1">
+    <path d="M 262 490 Q 258 508 270 512 L 274 512 Q 286 508 282 490 Q 278 480 272 480 Q 266 480 262 490 Z"/>
+    <rect x="269" y="512" width="6" height="10" rx="1"/>
+    <rect x="264" y="520" width="16" height="3" rx="1"/>
+    <path d="M 358 490 Q 354 508 366 512 L 370 512 Q 382 508 378 490 Q 374 480 368 480 Q 362 480 358 490 Z"/>
+    <rect x="365" y="512" width="6" height="10" rx="1"/>
+    <rect x="360" y="520" width="16" height="3" rx="1"/>
+  </g>
+
+  <!-- Booth Back 2 (right booth) -->
+  <rect x="640" y="310" width="480" height="200" rx="10" fill="url(#boothSeatGrad)" stroke="#2A1808" stroke-width="2"/>
+  <rect x="650" y="316" width="460" height="8" rx="4" fill="#3A2010" opacity="0.5"/>
+  <!-- Booth seat 2 -->
+  <rect x="640" y="508" width="480" height="55" rx="6" fill="#2A1808"/>
+  <rect x="640" y="508" width="480" height="8" rx="4" fill="#3A2010" opacity="0.5"/>
+
+  <!-- Table 2 (right) -->
+  <rect x="780" y="498" width="200" height="18" rx="5" fill="url(#tableGrad)"/>
+  <rect x="782" y="500" width="196" height="6" rx="3" fill="#6A4020" opacity="0.4"/>
+  <rect x="808" y="516" width="10" height="40" rx="3" fill="#2A1808"/>
+  <rect x="956" y="516" width="10" height="40" rx="3" fill="#2A1808"/>
+
+  <!-- Candle on Table 2 -->
+  <rect x="873" y="462" width="14" height="38" rx="3" fill="#E8E0C8"/>
+  <ellipse cx="880" cy="462" rx="7" ry="3" fill="#D8D0B8"/>
+  <!-- Flame 2 -->
+  <ellipse cx="880" cy="456" rx="4" ry="7" fill="#E8A830" opacity="0.9" filter="url(#glow)"/>
+  <ellipse cx="880" cy="454" rx="2" ry="4" fill="#FFFFFF" opacity="0.8"/>
+  <ellipse cx="880" cy="458" rx="30" ry="26" fill="#E8A830" opacity="0.12"/>
+
+  <!-- Wine glasses on table 2 -->
+  <g opacity="0.55" fill="#3A5A4A" stroke="#4A7A5A" stroke-width="1">
+    <path d="M 826 476 Q 822 494 834 498 L 838 498 Q 850 494 846 476 Q 842 466 836 466 Q 830 466 826 476 Z"/>
+    <rect x="833" y="498" width="6" height="10" rx="1"/>
+    <rect x="828" y="506" width="16" height="3" rx="1"/>
+    <path d="M 916 474 Q 912 492 924 496 L 928 496 Q 940 492 936 474 Q 932 464 926 464 Q 920 464 916 474 Z"/>
+    <rect x="923" y="496" width="6" height="10" rx="1"/>
+    <rect x="918" y="504" width="16" height="3" rx="1"/>
+  </g>
+
+  <!-- Floor (dark) -->
+  <rect x="0" y="568" width="1200" height="232" fill="#0A1408" opacity="0.6"/>
+  <!-- Floor join line -->
+  <rect x="0" y="568" width="1200" height="2" fill="#1A2A1A" opacity="0.5"/>
+
+  <!-- Decorative border top -->
+  <rect x="0" y="0" width="1200" height="4" fill="#C9A86A" opacity="0.4"/>
+
+  <!-- Label -->
+  <rect x="460" y="730" width="280" height="48" rx="4" fill="#0D1F18" opacity="0.9"/>
+  <rect x="460" y="730" width="280" height="48" rx="4" fill="none" stroke="#C9A86A" stroke-width="1.2" opacity="0.6"/>
+  <text x="600" y="762" font-family="Georgia, 'Times New Roman', serif" font-size="22"
+        fill="#C9A86A" text-anchor="middle" letter-spacing="6" font-weight="bold">OUR STORY</text>
+</svg>

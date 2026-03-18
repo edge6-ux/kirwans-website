@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#1A1F18"/>
+      <stop offset="100%" stop-color="#0D1F18"/>
+    </radialGradient>
+    <radialGradient id="plateGrad" cx="45%" cy="38%" r="58%">
+      <stop offset="0%" stop-color="#222222"/>
+      <stop offset="100%" stop-color="#0F0F0F"/>
+    </radialGradient>
+    <radialGradient id="salmonGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#E8784A"/>
+      <stop offset="40%" stop-color="#D4603A"/>
+      <stop offset="100%" stop-color="#B04020"/>
+    </radialGradient>
+    <radialGradient id="lightGlow" cx="50%" cy="25%" r="50%">
+      <stop offset="0%" stop-color="#E8A830" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0D1F18" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+
+  <!-- Warm overhead light -->
+  <ellipse cx="400" cy="120" rx="340" ry="240" fill="url(#lightGlow)"/>
+
+  <!-- Plate shadow -->
+  <ellipse cx="400" cy="365" rx="215" ry="28" fill="#000000" opacity="0.4"/>
+
+  <!-- Plate -->
+  <ellipse cx="400" cy="315" rx="205" ry="205" fill="url(#plateGrad)" filter="url(#shadow)"/>
+  <ellipse cx="400" cy="315" rx="205" ry="205" fill="none" stroke="#2E2E2E" stroke-width="3"/>
+  <ellipse cx="400" cy="315" rx="196" ry="196" fill="none" stroke="#1E1E1E" stroke-width="1.5"/>
+
+  <!-- Lemon wedge (pale yellow arc) -->
+  <path d="M 475 325 Q 495 310 490 285 Q 480 268 465 275 Q 455 290 462 315 Z" fill="#D4C254" opacity="0.7"/>
+  <line x1="465" y1="275" x2="490" y2="285" stroke="#B8A830" stroke-width="1" opacity="0.5"/>
+
+  <!-- Salmon fillet shape (tapered oblong) -->
+  <path d="M 295 295 Q 300 250 360 240 Q 430 232 470 270 Q 500 300 490 340 Q 478 372 430 375 Q 360 380 310 355 Q 278 335 295 295 Z"
+        fill="url(#salmonGrad)"/>
+
+  <!-- Salmon flesh lines (muscle segments) -->
+  <g stroke="#E89060" stroke-width="1.2" fill="none" opacity="0.45">
+    <line x1="320" y1="248" x2="305" y2="360"/>
+    <line x1="355" y1="241" x2="335" y2="372"/>
+    <line x1="390" y1="236" x2="368" y2="373"/>
+    <line x1="425" y1="238" x2="408" y2="370"/>
+    <line x1="458" y1="255" x2="446" y2="360"/>
+  </g>
+
+  <!-- Salmon skin edge -->
+  <path d="M 295 295 Q 300 250 360 240 Q 430 232 470 270" stroke="#A03828" stroke-width="3" fill="none" opacity="0.6"/>
+
+  <!-- Salmon highlight -->
+  <ellipse cx="375" cy="280" rx="50" ry="22" fill="#F0905A" opacity="0.3" transform="rotate(-10, 375, 280)"/>
+
+  <!-- Green herbs and micro greens -->
+  <circle cx="296" cy="320" r="7" fill="#2E6A2A"/>
+  <circle cx="284" cy="312" r="5" fill="#3A8034"/>
+  <circle cx="292" cy="306" r="4" fill="#2E6A2A"/>
+  <circle cx="500" cy="355" r="6" fill="#2E6A2A"/>
+  <circle cx="510" cy="345" r="4" fill="#3A8034"/>
+  <circle cx="505" cy="362" r="3" fill="#245A20"/>
+
+  <!-- Sauce pool (cream/butter sauce suggestion) -->
+  <ellipse cx="400" cy="352" rx="80" ry="18" fill="#E8D898" opacity="0.12"/>
+
+  <!-- Plate decorative ring -->
+  <ellipse cx="400" cy="315" rx="175" ry="175" fill="none" stroke="#C9A86A" stroke-width="0.8" opacity="0.18"/>
+
+  <!-- Label -->
+  <rect x="190" y="530" width="420" height="48" rx="4" fill="#122A1E" opacity="0.92"/>
+  <rect x="190" y="530" width="420" height="48" rx="4" fill="none" stroke="#C9A86A" stroke-width="1.2" opacity="0.6"/>
+  <text x="400" y="562" font-family="Georgia, 'Times New Roman', serif" font-size="22"
+        fill="#C9A86A" text-anchor="middle" letter-spacing="5" font-weight="bold">ATLANTIC SALMON</text>
+</svg>

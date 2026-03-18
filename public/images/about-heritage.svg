@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#1A3020"/>
+      <stop offset="70%" stop-color="#122A1E"/>
+      <stop offset="100%" stop-color="#0D1F18"/>
+    </radialGradient>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#2A5A38" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0D1F18" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="shamrockGrad" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#2E7A3A"/>
+      <stop offset="60%" stop-color="#1E5A28"/>
+      <stop offset="100%" stop-color="#143A1A"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGrad)"/>
+
+  <!-- Subtle center radial glow -->
+  <ellipse cx="600" cy="400" rx="400" ry="340" fill="url(#centerGlow)"/>
+
+  <!-- Celtic knot border — outer frame using path segments -->
+  <!-- Outer border rect -->
+  <rect x="30" y="30" width="1140" height="740" fill="none" stroke="#C9A86A" stroke-width="3" opacity="0.7"/>
+  <!-- Inner border rect -->
+  <rect x="50" y="50" width="1100" height="700" fill="none" stroke="#C9A86A" stroke-width="1.5" opacity="0.4"/>
+  <!-- Third border rect -->
+  <rect x="65" y="65" width="1070" height="670" fill="none" stroke="#C9A86A" stroke-width="1" opacity="0.25"/>
+
+  <!-- Celtic knot corner ornaments (top-left) -->
+  <g stroke="#C9A86A" stroke-width="2.5" fill="none" opacity="0.75">
+    <!-- TL knot motif -->
+    <path d="M 30 30 Q 80 30 80 80 Q 80 130 130 130 Q 80 130 80 80 Q 80 30 130 30"/>
+    <path d="M 50 50 Q 90 50 90 90 Q 90 110 110 110"/>
+    <circle cx="110" cy="110" r="12" stroke="#C9A86A" stroke-width="2"/>
+    <circle cx="110" cy="110" r="5" fill="#C9A86A" opacity="0.5"/>
+
+    <!-- TR knot motif -->
+    <path d="M 1170 30 Q 1120 30 1120 80 Q 1120 130 1070 130 Q 1120 130 1120 80 Q 1120 30 1070 30"/>
+    <path d="M 1150 50 Q 1110 50 1110 90 Q 1110 110 1090 110"/>
+    <circle cx="1090" cy="110" r="12"/>
+    <circle cx="1090" cy="110" r="5" fill="#C9A86A" opacity="0.5"/>
+
+    <!-- BL knot motif -->
+    <path d="M 30 770 Q 80 770 80 720 Q 80 670 130 670 Q 80 670 80 720 Q 80 770 130 770"/>
+    <path d="M 50 750 Q 90 750 90 710 Q 90 690 110 690"/>
+    <circle cx="110" cy="690" r="12"/>
+    <circle cx="110" cy="690" r="5" fill="#C9A86A" opacity="0.5"/>
+
+    <!-- BR knot motif -->
+    <path d="M 1170 770 Q 1120 770 1120 720 Q 1120 670 1070 670 Q 1120 670 1120 720 Q 1120 770 1070 770"/>
+    <path d="M 1150 750 Q 1110 750 1110 710 Q 1110 690 1090 690"/>
+    <circle cx="1090" cy="690" r="12"/>
+    <circle cx="1090" cy="690" r="5" fill="#C9A86A" opacity="0.5"/>
+  </g>
+
+  <!-- Celtic knot mid-border decorations (top and bottom center) -->
+  <g stroke="#C9A86A" fill="none" opacity="0.55">
+    <!-- Top center ornament -->
+    <circle cx="600" cy="50" r="16" stroke-width="2"/>
+    <circle cx="600" cy="50" r="8" stroke-width="1.5"/>
+    <circle cx="600" cy="50" r="3" fill="#C9A86A"/>
+    <line x1="620" y1="50" x2="700" y2="50" stroke-width="1.5"/>
+    <line x1="500" y1="50" x2="580" y2="50" stroke-width="1.5"/>
+    <line x1="710" y1="50" x2="730" y2="50" stroke-width="1"/>
+    <line x1="470" y1="50" x2="490" y2="50" stroke-width="1"/>
+
+    <!-- Bottom center ornament -->
+    <circle cx="600" cy="750" r="16" stroke-width="2"/>
+    <circle cx="600" cy="750" r="8" stroke-width="1.5"/>
+    <circle cx="600" cy="750" r="3" fill="#C9A86A"/>
+    <line x1="620" y1="750" x2="700" y2="750" stroke-width="1.5"/>
+    <line x1="500" y1="750" x2="580" y2="750" stroke-width="1.5"/>
+
+    <!-- Left center ornament -->
+    <circle cx="40" cy="400" r="16" stroke-width="2"/>
+    <circle cx="40" cy="400" r="8" stroke-width="1.5"/>
+    <circle cx="40" cy="400" r="3" fill="#C9A86A"/>
+
+    <!-- Right center ornament -->
+    <circle cx="1160" cy="400" r="16" stroke-width="2"/>
+    <circle cx="1160" cy="400" r="8" stroke-width="1.5"/>
+    <circle cx="1160" cy="400" r="3" fill="#C9A86A"/>
+  </g>
+
+  <!-- Interlocking Celtic knot chain pattern (top border, simplified) -->
+  <g stroke="#C9A86A" stroke-width="1.8" fill="none" opacity="0.38">
+    <path d="M 170 40 Q 190 30 200 40 Q 210 50 200 60 Q 190 70 180 60 Q 170 50 180 40"/>
+    <path d="M 220 40 Q 240 30 250 40 Q 260 50 250 60 Q 240 70 230 60 Q 220 50 230 40"/>
+    <path d="M 270 40 Q 290 30 300 40 Q 310 50 300 60 Q 290 70 280 60 Q 270 50 280 40"/>
+    <path d="M 320 40 Q 340 30 350 40 Q 360 50 350 60 Q 340 70 330 60 Q 320 50 330 40"/>
+    <!-- Similar on right side -->
+    <path d="M 850 40 Q 870 30 880 40 Q 890 50 880 60 Q 870 70 860 60 Q 850 50 860 40"/>
+    <path d="M 900 40 Q 920 30 930 40 Q 940 50 930 60 Q 920 70 910 60 Q 900 50 910 40"/>
+    <path d="M 950 40 Q 970 30 980 40 Q 990 50 980 60 Q 970 70 960 60 Q 950 50 960 40"/>
+    <path d="M 1000 40 Q 1020 30 1030 40 Q 1040 50 1030 60 Q 1020 70 1010 60 Q 1000 50 1010 40"/>
+  </g>
+
+  <!-- Shamrock / four-leaf clover in center -->
+  <!-- Stem -->
+  <rect x="595" y="530" width="10" height="80" rx="5" fill="url(#shamrockGrad)"/>
+  <!-- Slight stem curve -->
+  <path d="M 595 560 Q 570 590 565 610 Q 560 630 575 640" stroke="#1E5A28" stroke-width="4" fill="none" opacity="0.5"/>
+
+  <!-- Left leaf -->
+  <ellipse cx="535" cy="435" rx="55" ry="75" fill="url(#shamrockGrad)" transform="rotate(-35, 535, 435)" filter="url(#softGlow)"/>
+  <ellipse cx="545" cy="418" rx="20" ry="30" fill="#3A8A46" opacity="0.25" transform="rotate(-35, 535, 435)"/>
+
+  <!-- Right leaf -->
+  <ellipse cx="665" cy="435" rx="55" ry="75" fill="url(#shamrockGrad)" transform="rotate(35, 665, 435)" filter="url(#softGlow)"/>
+  <ellipse cx="655" cy="418" rx="20" ry="30" fill="#3A8A46" opacity="0.25" transform="rotate(35, 665, 435)"/>
+
+  <!-- Top leaf -->
+  <ellipse cx="600" cy="340" rx="55" ry="75" fill="url(#shamrockGrad)" filter="url(#softGlow)"/>
+  <ellipse cx="588" cy="325" rx="18" ry="28" fill="#3A8A46" opacity="0.25"/>
+
+  <!-- Bottom fourth leaf -->
+  <ellipse cx="600" cy="520" rx="50" ry="65" fill="url(#shamrockGrad)" filter="url(#softGlow)"/>
+
+  <!-- Leaf vein lines -->
+  <g stroke="#1E5A28" stroke-width="1.5" fill="none" opacity="0.45">
+    <!-- Left leaf vein -->
+    <line x1="535" y1="480" x2="535" y2="395" transform="rotate(-35, 535, 435)"/>
+    <!-- Right leaf vein -->
+    <line x1="665" y1="480" x2="665" y2="395" transform="rotate(35, 665, 435)"/>
+    <!-- Top leaf vein -->
+    <line x1="600" y1="390" x2="600" y2="310"/>
+    <!-- Bottom leaf vein -->
+    <line x1="600" y1="550" x2="600" y2="490"/>
+  </g>
+
+  <!-- Glow around shamrock -->
+  <ellipse cx="600" cy="435" rx="150" ry="140" fill="#1E5A28" opacity="0.08"/>
+
+  <!-- Decorative circle around shamrock -->
+  <circle cx="600" cy="430" rx="180" r="175" fill="none" stroke="#C9A86A" stroke-width="1.5" opacity="0.3"/>
+  <circle cx="600" cy="430" r="185" fill="none" stroke="#C9A86A" stroke-width="0.8" opacity="0.18"/>
+
+  <!-- Small diamonds at cardinal points of circle -->
+  <g fill="#C9A86A" opacity="0.55">
+    <polygon points="600,248 606,260 600,272 594,260" />
+    <polygon points="416,430 428,424 440,430 428,436" />
+    <polygon points="760,430 772,424 784,430 772,436" />
+    <polygon points="600,598 606,610 600,622 594,610" />
+  </g>
+
+  <!-- Label -->
+  <rect x="420" y="666" width="360" height="50" rx="4" fill="#0D1F18" opacity="0.9"/>
+  <rect x="420" y="666" width="360" height="50" rx="4" fill="none" stroke="#C9A86A" stroke-width="1.5" opacity="0.7"/>
+  <text x="600" y="698" font-family="Georgia, 'Times New Roman', serif" font-size="22"
+        fill="#C9A86A" text-anchor="middle" letter-spacing="5" font-weight="bold">IRISH HERITAGE</text>
+</svg>

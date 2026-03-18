@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#1E1A10"/>
+      <stop offset="100%" stop-color="#0D1F18"/>
+    </radialGradient>
+    <radialGradient id="fishGrad" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#E8B848"/>
+      <stop offset="50%" stop-color="#CC9828"/>
+      <stop offset="100%" stop-color="#AA7810"/>
+    </radialGradient>
+    <radialGradient id="chipGrad" cx="50%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#D4A030"/>
+      <stop offset="100%" stop-color="#A87818"/>
+    </radialGradient>
+    <radialGradient id="lightGlow" cx="50%" cy="20%" r="55%">
+      <stop offset="0%" stop-color="#E8B830" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0D1F18" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <!-- Background: dark wood surface -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+
+  <!-- Wood grain lines -->
+  <g opacity="0.10">
+    <rect x="0" y="60" width="800" height="2" fill="#5C3D1A"/>
+    <rect x="0" y="140" width="800" height="1.5" fill="#3D2510"/>
+    <rect x="0" y="220" width="800" height="2" fill="#5C3D1A"/>
+    <rect x="0" y="300" width="800" height="1.5" fill="#5C3D1A"/>
+    <rect x="0" y="380" width="800" height="2" fill="#3D2510"/>
+    <rect x="0" y="460" width="800" height="1.5" fill="#5C3D1A"/>
+    <rect x="0" y="540" width="800" height="2" fill="#3D2510"/>
+  </g>
+
+  <!-- Overhead warm light -->
+  <ellipse cx="400" cy="100" rx="380" ry="280" fill="url(#lightGlow)"/>
+
+  <!-- Serving paper/liner (off-white rectangle, slight tilt) -->
+  <rect x="160" y="200" width="480" height="280" rx="6" fill="#E8E0C8" opacity="0.12" transform="rotate(-2, 400, 340)"/>
+
+  <!-- Chips / thick-cut fries group (behind fish) -->
+  <!-- Chip 1 -->
+  <rect x="440" y="220" width="38" height="110" rx="8" fill="url(#chipGrad)" filter="url(#shadow)" transform="rotate(8, 459, 275)"/>
+  <rect x="442" y="224" width="12" height="35" rx="4" fill="#E8C060" opacity="0.35" transform="rotate(8, 459, 275)"/>
+
+  <!-- Chip 2 -->
+  <rect x="490" y="230" width="38" height="105" rx="8" fill="url(#chipGrad)" filter="url(#shadow)" transform="rotate(15, 509, 282)"/>
+  <rect x="492" y="234" width="12" height="32" rx="4" fill="#E8C060" opacity="0.35" transform="rotate(15, 509, 282)"/>
+
+  <!-- Chip 3 -->
+  <rect x="530" y="240" width="36" height="100" rx="8" fill="url(#chipGrad)" filter="url(#shadow)" transform="rotate(22, 548, 290)"/>
+
+  <!-- Chip 4 (shorter, foreground) -->
+  <rect x="460" y="310" width="36" height="85" rx="8" fill="#C89020" filter="url(#shadow)" transform="rotate(5, 478, 352)"/>
+  <rect x="462" y="314" width="11" height="28" rx="4" fill="#E0B040" opacity="0.35" transform="rotate(5, 478, 352)"/>
+
+  <!-- Chip 5 -->
+  <rect x="500" y="320" width="34" height="80" rx="7" fill="#C89020" filter="url(#shadow)" transform="rotate(-5, 517, 360)"/>
+
+  <!-- Chip 6 -->
+  <rect x="545" y="260" width="32" height="95" rx="7" fill="#B88018" filter="url(#shadow)" transform="rotate(18, 561, 307)"/>
+
+  <!-- Battered fish fillet (large irregular shape) -->
+  <path d="M 200 240 Q 195 210 240 198 Q 310 185 390 195 Q 455 203 470 238 Q 482 268 468 320 Q 452 368 395 382 Q 325 395 268 375 Q 210 352 196 305 Q 185 268 200 240 Z"
+        fill="url(#fishGrad)" filter="url(#shadow)"/>
+
+  <!-- Batter texture highlight -->
+  <path d="M 215 240 Q 260 210 350 205 Q 420 205 458 240" stroke="#F0C860" stroke-width="2.5" fill="none" opacity="0.4"/>
+  <ellipse cx="330" cy="270" rx="90" ry="45" fill="#F0C060" opacity="0.18" transform="rotate(-5, 330, 270)"/>
+
+  <!-- Batter crispy bumps -->
+  <circle cx="250" cy="255" r="12" fill="#D4A028" opacity="0.4"/>
+  <circle cx="300" cy="240" r="9" fill="#E0B030" opacity="0.35"/>
+  <circle cx="360" cy="238" r="11" fill="#D4A028" opacity="0.4"/>
+  <circle cx="420" cy="258" r="10" fill="#C89020" opacity="0.35"/>
+  <circle cx="440" cy="310" r="9" fill="#D4A028" opacity="0.3"/>
+  <circle cx="230" cy="320" r="8" fill="#C89020" opacity="0.3"/>
+
+  <!-- Lemon wedge -->
+  <path d="M 175 355 Q 160 335 170 315 Q 178 300 195 308 Q 205 322 198 345 Z" fill="#C8B838" opacity="0.75"/>
+  <line x1="170" y1="315" x2="195" y2="308" stroke="#A89828" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Tartar sauce blob -->
+  <ellipse cx="490" cy="390" rx="38" ry="24" fill="#E8E4D0" opacity="0.3"/>
+
+  <!-- Label -->
+  <rect x="215" y="530" width="370" height="48" rx="4" fill="#122A1E" opacity="0.92"/>
+  <rect x="215" y="530" width="370" height="48" rx="4" fill="none" stroke="#C9A86A" stroke-width="1.2" opacity="0.6"/>
+  <text x="400" y="562" font-family="Georgia, 'Times New Roman', serif" font-size="22"
+        fill="#C9A86A" text-anchor="middle" letter-spacing="5" font-weight="bold">FISH &amp; CHIPS</text>
+</svg>

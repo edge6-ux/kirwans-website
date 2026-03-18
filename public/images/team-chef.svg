@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#1A3028"/>
+      <stop offset="100%" stop-color="#0D1F18"/>
+    </radialGradient>
+    <radialGradient id="silhouetteGrad" cx="45%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#1E3A2A"/>
+      <stop offset="100%" stop-color="#0D2018"/>
+    </radialGradient>
+    <radialGradient id="hatGrad" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#E8E4D8"/>
+      <stop offset="100%" stop-color="#C8C0A8"/>
+    </radialGradient>
+    <radialGradient id="glowRad" cx="50%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#C9A86A" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#C9A86A" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="circleClip">
+      <circle cx="200" cy="200" r="190"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#bgGrad)"/>
+
+  <!-- Circle portrait -->
+  <circle cx="200" cy="200" r="185" fill="#122A1E"/>
+  <circle cx="200" cy="200" r="185" fill="none" stroke="#C9A86A" stroke-width="3" opacity="0.7"/>
+  <circle cx="200" cy="200" r="178" fill="none" stroke="#C9A86A" stroke-width="0.8" opacity="0.3"/>
+  <circle cx="200" cy="200" r="185" fill="url(#glowRad)"/>
+
+  <!-- Silhouette clipped to circle -->
+  <g clip-path="url(#circleClip)">
+    <!-- Chef jacket / shoulders (slightly broader - male) -->
+    <path d="M 40 400 Q 65 330 110 305 Q 145 288 170 280 Q 186 275 200 275 Q 214 275 230 280 Q 255 288 290 305 Q 335 330 360 400 Z"
+          fill="url(#silhouetteGrad)"/>
+    <!-- Chef jacket double-breast buttons detail -->
+    <rect x="192" y="290" width="7" height="7" rx="3" fill="#1A3A28" opacity="0.6"/>
+    <rect x="201" y="290" width="7" height="7" rx="3" fill="#1A3A28" opacity="0.6"/>
+    <rect x="192" y="308" width="7" height="7" rx="3" fill="#1A3A28" opacity="0.6"/>
+    <rect x="201" y="308" width="7" height="7" rx="3" fill="#1A3A28" opacity="0.6"/>
+    <!-- Collar -->
+    <path d="M 170 280 Q 185 295 200 298 Q 215 295 230 280 L 228 300 Q 213 312 200 314 Q 187 312 172 300 Z"
+          fill="#0D2018"/>
+    <!-- Neck -->
+    <rect x="188" y="245" width="24" height="40" rx="8" fill="url(#silhouetteGrad)"/>
+    <!-- Head (slightly wider/squarer - male) -->
+    <ellipse cx="200" cy="210" rx="64" ry="72" fill="url(#silhouetteGrad)"/>
+    <!-- Short hair (male) -->
+    <path d="M 136 195 Q 135 158 148 136 Q 162 113 180 104 Q 190 99 200 98 Q 210 99 220 104 Q 238 113 252 136 Q 265 158 264 195"
+          fill="#0A1A10" stroke="none"/>
+    <!-- Slight hair top flat line (male, close-cropped) -->
+    <rect x="140" y="160" width="120" height="5" rx="2" fill="#0A1A10" opacity="0.5"/>
+
+    <!-- Chef hat (toque) -->
+    <!-- Hat base band -->
+    <rect x="148" y="108" width="104" height="22" rx="3" fill="#D8D4C0"/>
+    <rect x="148" y="108" width="104" height="5" rx="2" fill="#C8C0A8"/>
+    <!-- Hat tall crown (rounded top) -->
+    <path d="M 152 110 Q 150 75 155 52 Q 162 28 200 24 Q 238 28 245 52 Q 250 75 248 110 Z"
+          fill="url(#hatGrad)"/>
+    <!-- Hat fold lines (creases) -->
+    <line x1="178" y1="110" x2="174" y2="28" stroke="#B8B0A0" stroke-width="1.5" opacity="0.4"/>
+    <line x1="200" y1="110" x2="200" y2="24" stroke="#B8B0A0" stroke-width="1.5" opacity="0.4"/>
+    <line x1="222" y1="110" x2="226" y2="28" stroke="#B8B0A0" stroke-width="1.5" opacity="0.4"/>
+    <!-- Hat highlight -->
+    <path d="M 165 55 Q 180 38 200 34" stroke="#FFFFFF" stroke-width="2" fill="none" opacity="0.3"/>
+  </g>
+
+  <!-- Inner shadow bottom -->
+  <path d="M 15 260 Q 15 385 200 385 Q 385 385 385 260" fill="#0D1F18" opacity="0.2"/>
+
+  <!-- Label -->
+  <rect x="80" y="333" width="240" height="44" rx="4" fill="#0D1F18" opacity="0.88"/>
+  <rect x="80" y="333" width="240" height="44" rx="4" fill="none" stroke="#C9A86A" stroke-width="1.5" opacity="0.65"/>
+  <text x="200" y="361" font-family="Georgia, 'Times New Roman', serif" font-size="20"
+        fill="#C9A86A" text-anchor="middle" letter-spacing="8" font-weight="bold">CHEF</text>
+</svg>

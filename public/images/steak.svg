@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#2A1A0A" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0D1F18" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="plateGrad" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#1E1E1E"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </radialGradient>
+    <radialGradient id="steakGrad" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#8B3A1A"/>
+      <stop offset="50%" stop-color="#6B2A10"/>
+      <stop offset="100%" stop-color="#4A1A08"/>
+    </radialGradient>
+    <radialGradient id="overheadLight" cx="50%" cy="30%" r="45%">
+      <stop offset="0%" stop-color="#E8A830" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0D1F18" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="plateShadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background: dark wood surface -->
+  <rect width="800" height="600" fill="url(#bgGlow)"/>
+
+  <!-- Wood grain suggestion -->
+  <g opacity="0.12">
+    <rect x="0" y="50" width="800" height="2" fill="#5C3D1A"/>
+    <rect x="0" y="130" width="800" height="1.5" fill="#5C3D1A"/>
+    <rect x="0" y="210" width="800" height="2" fill="#3D2510"/>
+    <rect x="0" y="290" width="800" height="1.5" fill="#5C3D1A"/>
+    <rect x="0" y="370" width="800" height="2" fill="#5C3D1A"/>
+    <rect x="0" y="450" width="800" height="1.5" fill="#3D2510"/>
+    <rect x="0" y="530" width="800" height="2" fill="#5C3D1A"/>
+  </g>
+
+  <!-- Overhead warm light -->
+  <ellipse cx="400" cy="150" rx="320" ry="260" fill="url(#overheadLight)"/>
+
+  <!-- Plate shadow -->
+  <ellipse cx="400" cy="360" rx="210" ry="28" fill="#000000" opacity="0.45"/>
+
+  <!-- Plate -->
+  <ellipse cx="400" cy="315" rx="200" ry="200" fill="url(#plateGrad)" filter="url(#plateShadow)"/>
+
+  <!-- Plate rim highlight -->
+  <ellipse cx="400" cy="315" rx="200" ry="200" fill="none" stroke="#333333" stroke-width="3"/>
+  <ellipse cx="400" cy="315" rx="192" ry="192" fill="none" stroke="#2A2A2A" stroke-width="1.5"/>
+
+  <!-- Steak shape (irregular oval) -->
+  <ellipse cx="400" cy="320" rx="135" ry="95" fill="url(#steakGrad)" transform="rotate(-12, 400, 320)"/>
+
+  <!-- Steak char marks / grill lines -->
+  <g opacity="0.55" stroke="#2A1000" stroke-width="5" stroke-linecap="round">
+    <line x1="330" y1="272" x2="430" y2="252" transform="rotate(-12, 400, 320)"/>
+    <line x1="345" y1="295" x2="455" y2="275" transform="rotate(-12, 400, 320)"/>
+    <line x1="325" y1="342" x2="430" y2="322" transform="rotate(-12, 400, 320)"/>
+    <line x1="340" y1="368" x2="440" y2="348" transform="rotate(-12, 400, 320)"/>
+  </g>
+
+  <!-- Steak highlight (sear sheen) -->
+  <ellipse cx="370" cy="300" rx="55" ry="30" fill="#AA5528" opacity="0.35" transform="rotate(-12, 400, 320)"/>
+
+  <!-- Green herb garnish dots -->
+  <circle cx="490" cy="278" r="7" fill="#2E5A2A"/>
+  <circle cx="502" cy="268" r="5" fill="#3A7A34"/>
+  <circle cx="495" cy="260" r="4" fill="#2E5A2A"/>
+  <circle cx="312" cy="350" r="6" fill="#2E5A2A"/>
+  <circle cx="302" cy="360" r="4" fill="#3A7A34"/>
+
+  <!-- Sauce drizzle suggestion -->
+  <path d="M 350 390 Q 370 395 390 388 Q 410 382 430 390" stroke="#8B3A1A" stroke-width="2.5" fill="none" opacity="0.5"/>
+
+  <!-- Decorative plate rule -->
+  <ellipse cx="400" cy="315" rx="170" ry="170" fill="none" stroke="#C9A86A" stroke-width="0.8" opacity="0.2"/>
+
+  <!-- Label background bar -->
+  <rect x="180" y="530" width="440" height="48" rx="4" fill="#122A1E" opacity="0.92"/>
+  <rect x="180" y="530" width="440" height="48" rx="4" fill="none" stroke="#C9A86A" stroke-width="1.2" opacity="0.6"/>
+
+  <!-- Label text -->
+  <text x="400" y="562" font-family="Georgia, 'Times New Roman', serif" font-size="22"
+        fill="#C9A86A" text-anchor="middle" letter-spacing="6" font-weight="bold">SIGNATURE STEAK</text>
+</svg>

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#1A1A12"/>
+      <stop offset="100%" stop-color="#0D1F18"/>
+    </radialGradient>
+    <radialGradient id="liquidGrad" cx="35%" cy="25%" r="70%">
+      <stop offset="0%" stop-color="#E8C040"/>
+      <stop offset="40%" stop-color="#CC9818"/>
+      <stop offset="100%" stop-color="#9A6808"/>
+    </radialGradient>
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1A3028" stop-opacity="0.8"/>
+      <stop offset="25%" stop-color="#2A5040" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#3A6850" stop-opacity="0.15"/>
+      <stop offset="75%" stop-color="#2A5040" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#1A3028" stop-opacity="0.8"/>
+    </linearGradient>
+    <radialGradient id="glowRad" cx="50%" cy="35%" r="45%">
+      <stop offset="0%" stop-color="#CC9818" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0D1F18" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glassShadow">
+      <feDropShadow dx="3" dy="12" stdDeviation="12" flood-color="#000000" flood-opacity="0.65"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+
+  <!-- Warm glow behind cocktail -->
+  <ellipse cx="400" cy="320" rx="240" ry="220" fill="url(#glowRad)"/>
+
+  <!-- Bar surface -->
+  <rect x="0" y="490" width="800" height="110" fill="#0E0A04" opacity="0.65"/>
+  <rect x="0" y="490" width="800" height="2.5" fill="#C9A86A" opacity="0.2"/>
+
+  <!-- Glass shadow -->
+  <ellipse cx="400" cy="492" rx="30" ry="10" fill="#000000" opacity="0.5"/>
+
+  <!-- Martini / cocktail glass — classic wide V bowl on tall stem -->
+  <!-- Stem -->
+  <line x1="400" y1="380" x2="400" y2="488" stroke="#3A6050" stroke-width="5" opacity="0.7"/>
+  <!-- Stem highlight -->
+  <line x1="401" y1="382" x2="401" y2="487" stroke="#FFFFFF" stroke-width="1.5" opacity="0.1"/>
+
+  <!-- Base -->
+  <rect x="356" y="486" width="88" height="8" rx="4" fill="#1E3828" opacity="0.9" filter="url(#glassShadow)"/>
+  <rect x="348" y="492" width="104" height="6" rx="3" fill="#162A1E" opacity="0.9"/>
+  <!-- Base highlight -->
+  <line x1="358" y1="489" x2="422" y2="489" stroke="#3A6050" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Glass bowl (wide V shape) with liquid -->
+  <!-- Liquid fill (inside the V) -->
+  <path d="M 205 135 L 400 380 L 595 135 Z" fill="url(#liquidGrad)" opacity="0.88" filter="url(#glassShadow)"/>
+
+  <!-- Liquid surface shimmer -->
+  <path d="M 220 135 Q 320 128 400 130 Q 480 132 580 135" stroke="#F0D060" stroke-width="2" fill="none" opacity="0.4"/>
+  <!-- Liquid internal refraction -->
+  <path d="M 240 175 Q 330 165 400 168 Q 470 170 560 175" stroke="#E8C040" stroke-width="1.5" fill="none" opacity="0.2"/>
+  <!-- Central highlight in liquid -->
+  <ellipse cx="380" cy="200" rx="60" ry="35" fill="#F0D060" opacity="0.12" transform="rotate(-8, 380, 200)"/>
+
+  <!-- Glass bowl walls (overlay for glass transparency) -->
+  <!-- Left wall -->
+  <path d="M 205 135 L 400 380 L 380 380 L 218 135 Z" fill="url(#glassGrad)" opacity="0.55"/>
+  <!-- Right wall -->
+  <path d="M 595 135 L 400 380 L 420 380 L 582 135 Z" fill="url(#glassGrad)" opacity="0.55"/>
+  <!-- Front glass overlay -->
+  <path d="M 205 135 L 400 380 L 595 135 Z" fill="url(#glassGrad)" opacity="0.3"/>
+
+  <!-- Glass rim (top edge of bowl) -->
+  <line x1="205" y1="135" x2="595" y2="135" stroke="#3A6050" stroke-width="4" opacity="0.7"/>
+  <line x1="205" y1="135" x2="595" y2="135" stroke="#FFFFFF" stroke-width="1.5" opacity="0.1"/>
+
+  <!-- Cocktail garnish: orange slice on rim -->
+  <path d="M 570 112 Q 582 105 596 112 Q 604 120 598 132 L 578 140 Q 566 132 566 120 Z"
+        fill="#E87A18" opacity="0.8"/>
+  <path d="M 570 112 Q 582 105 596 112" stroke="#CC6010" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <!-- Orange segments -->
+  <line x1="582" y1="107" x2="582" y2="138" stroke="#CC6010" stroke-width="0.8" opacity="0.5"/>
+  <line x1="572" y1="112" x2="596" y2="130" stroke="#CC6010" stroke-width="0.8" opacity="0.5"/>
+  <line x1="596" y1="112" x2="572" y2="130" stroke="#CC6010" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Cocktail pick / stirrer (suggestion) -->
+  <line x1="480" y1="90" x2="430" y2="350" stroke="#C9A86A" stroke-width="2" opacity="0.5"/>
+  <circle cx="480" cy="88" r="6" fill="#C9A86A" opacity="0.55"/>
+
+  <!-- Bubbles in liquid (lightly carbonated) -->
+  <circle cx="370" cy="280" r="3" fill="#F0D060" opacity="0.2"/>
+  <circle cx="395" cy="240" r="2.5" fill="#F0D060" opacity="0.18"/>
+  <circle cx="420" cy="310" r="3" fill="#F0D060" opacity="0.18"/>
+  <circle cx="350" cy="320" r="2" fill="#F0D060" opacity="0.15"/>
+
+  <!-- Decorative rules -->
+  <line x1="220" y1="550" x2="340" y2="550" stroke="#C9A86A" stroke-width="1" opacity="0.4"/>
+  <line x1="460" y1="550" x2="580" y2="550" stroke="#C9A86A" stroke-width="1" opacity="0.4"/>
+  <circle cx="400" cy="550" r="3" fill="#C9A86A" opacity="0.4"/>
+
+  <!-- Label -->
+  <rect x="195" y="560" width="410" height="34" rx="4" fill="#122A1E" opacity="0.92"/>
+  <rect x="195" y="560" width="410" height="34" rx="4" fill="none" stroke="#C9A86A" stroke-width="1.2" opacity="0.6"/>
+  <text x="400" y="583" font-family="Georgia, 'Times New Roman', serif" font-size="20"
+        fill="#C9A86A" text-anchor="middle" letter-spacing="5" font-weight="bold">CRAFT COCKTAILS</text>
+</svg>

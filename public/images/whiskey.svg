@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#1C1508"/>
+      <stop offset="100%" stop-color="#0D1F18"/>
+    </radialGradient>
+    <radialGradient id="liquidGrad" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#D4880A"/>
+      <stop offset="40%" stop-color="#B86808"/>
+      <stop offset="100%" stop-color="#8A4A04"/>
+    </radialGradient>
+    <linearGradient id="glassBodyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1A3028" stop-opacity="0.85"/>
+      <stop offset="20%" stop-color="#2A5040" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#3A6850" stop-opacity="0.25"/>
+      <stop offset="80%" stop-color="#2A5040" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#1A3028" stop-opacity="0.85"/>
+    </linearGradient>
+    <radialGradient id="glowRad" cx="50%" cy="40%" r="45%">
+      <stop offset="0%" stop-color="#CC8A2A" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0D1F18" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glassShadow">
+      <feDropShadow dx="4" dy="12" stdDeviation="14" flood-color="#000000" flood-opacity="0.65"/>
+    </filter>
+    <filter id="liquidGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+
+  <!-- Subtle warm glow around glass -->
+  <ellipse cx="400" cy="340" rx="250" ry="200" fill="url(#glowRad)"/>
+
+  <!-- Dark bar surface -->
+  <rect x="0" y="470" width="800" height="130" fill="#0E0A04" opacity="0.7"/>
+  <rect x="0" y="470" width="800" height="3" fill="#C9A86A" opacity="0.2"/>
+
+  <!-- Glass shadow -->
+  <ellipse cx="400" cy="472" rx="95" ry="14" fill="#000000" opacity="0.55"/>
+
+  <!-- Rocks glass (old fashioned / tumbler) — wider than tall, thick base -->
+  <!-- Outer glass shape -->
+  <path d="M 305 200 L 295 465 Q 295 472 310 472 L 490 472 Q 505 472 505 465 L 495 200 Z"
+        fill="url(#glassBodyGrad)" filter="url(#glassShadow)"/>
+
+  <!-- Amber whiskey liquid fill -->
+  <path d="M 308 290 L 298 465 Q 298 471 312 471 L 488 471 Q 502 471 502 465 L 492 290 Z"
+        fill="url(#liquidGrad)" opacity="0.92" filter="url(#liquidGlow)"/>
+
+  <!-- Liquid surface (meniscus) -->
+  <path d="M 308 290 Q 360 283 400 285 Q 440 287 492 290" stroke="#E8A830" stroke-width="2.5" fill="none" opacity="0.5"/>
+
+  <!-- Whiskey depth / light refraction inside liquid -->
+  <path d="M 320 310 Q 355 305 380 308" stroke="#E8C050" stroke-width="1.5" fill="none" opacity="0.3"/>
+  <ellipse cx="370" cy="360" rx="45" ry="25" fill="#D4880A" opacity="0.2" transform="rotate(-5, 370, 360)"/>
+
+  <!-- Ice cube 1 -->
+  <path d="M 340 385 L 360 370 L 400 375 L 415 392 L 395 408 L 358 402 Z"
+        fill="#E8F4F8" opacity="0.25"/>
+  <path d="M 340 385 L 360 370 L 400 375" stroke="#FFFFFF" stroke-width="1" fill="none" opacity="0.3"/>
+  <path d="M 400 375 L 415 392 L 395 408" stroke="#FFFFFF" stroke-width="1" fill="none" opacity="0.2"/>
+  <!-- Ice cube 2 -->
+  <path d="M 380 410 L 398 395 L 435 400 L 448 418 L 428 432 L 390 427 Z"
+        fill="#E8F4F8" opacity="0.2"/>
+  <path d="M 380 410 L 398 395 L 435 400" stroke="#FFFFFF" stroke-width="1" fill="none" opacity="0.25"/>
+
+  <!-- Glass walls overlay (transparency effect) -->
+  <!-- Left glass wall highlight -->
+  <path d="M 305 200 L 295 465 Q 295 472 308 472 L 312 472 L 308 465 L 318 200 Z"
+        fill="#FFFFFF" opacity="0.05"/>
+  <!-- Right glass wall highlight -->
+  <path d="M 495 200 L 505 465 Q 505 472 492 472 L 488 472 L 492 465 L 482 200 Z"
+        fill="#FFFFFF" opacity="0.05"/>
+  <!-- Front face glass overlay -->
+  <path d="M 305 200 L 295 465 Q 295 472 310 472 L 490 472 Q 505 472 505 465 L 495 200 Z"
+        fill="url(#glassBodyGrad)" opacity="0.4"/>
+
+  <!-- Glass base (thick heavy base of rocks glass) -->
+  <rect x="293" y="462" width="214" height="14" rx="2" fill="#1A2820" opacity="0.8"/>
+  <rect x="288" y="474" width="224" height="10" rx="3" fill="#101A14" opacity="0.9"/>
+  <rect x="284" y="482" width="232" height="6" rx="3" fill="#0C1410"/>
+  <!-- Base highlight -->
+  <rect x="295" y="465" width="90" height="3" rx="1" fill="#3A5040" opacity="0.3"/>
+
+  <!-- Glass rim -->
+  <rect x="305" y="197" width="190" height="8" rx="2" fill="#2A4A38" opacity="0.7"/>
+  <rect x="305" y="197" width="190" height="4" rx="2" fill="#FFFFFF" opacity="0.08"/>
+  <!-- Rim highlight -->
+  <path d="M 312 200 Q 360 195 400 196 Q 440 197 488 200" stroke="#FFFFFF" stroke-width="1.5" fill="none" opacity="0.12"/>
+
+  <!-- Condensation drops on glass exterior -->
+  <circle cx="320" cy="340" r="2.5" fill="#FFFFFF" opacity="0.1"/>
+  <circle cx="315" cy="360" r="2" fill="#FFFFFF" opacity="0.08"/>
+  <circle cx="480" cy="320" r="2.5" fill="#FFFFFF" opacity="0.1"/>
+  <circle cx="482" cy="348" r="2" fill="#FFFFFF" opacity="0.08"/>
+  <circle cx="328" cy="420" r="2" fill="#FFFFFF" opacity="0.07"/>
+
+  <!-- Decorative dividers -->
+  <line x1="220" y1="540" x2="340" y2="540" stroke="#C9A86A" stroke-width="1" opacity="0.4"/>
+  <line x1="460" y1="540" x2="580" y2="540" stroke="#C9A86A" stroke-width="1" opacity="0.4"/>
+  <circle cx="400" cy="540" r="3" fill="#C9A86A" opacity="0.4"/>
+
+  <!-- Label -->
+  <rect x="210" y="550" width="380" height="44" rx="4" fill="#122A1E" opacity="0.92"/>
+  <rect x="210" y="550" width="380" height="44" rx="4" fill="none" stroke="#C9A86A" stroke-width="1.2" opacity="0.6"/>
+  <text x="400" y="578" font-family="Georgia, 'Times New Roman', serif" font-size="20"
+        fill="#C9A86A" text-anchor="middle" letter-spacing="5" font-weight="bold">IRISH WHISKEY</text>
+</svg>

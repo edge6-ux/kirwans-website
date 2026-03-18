@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#1A1208"/>
+      <stop offset="100%" stop-color="#0D1F18"/>
+    </radialGradient>
+    <radialGradient id="plateGrad" cx="45%" cy="38%" r="58%">
+      <stop offset="0%" stop-color="#202020"/>
+      <stop offset="100%" stop-color="#0E0E0E"/>
+    </radialGradient>
+    <radialGradient id="puddingGrad" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#8B5A20"/>
+      <stop offset="50%" stop-color="#6A3E10"/>
+      <stop offset="100%" stop-color="#4A2808"/>
+    </radialGradient>
+    <radialGradient id="sauceGrad" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#C8780A"/>
+      <stop offset="100%" stop-color="#8A4A04"/>
+    </radialGradient>
+    <radialGradient id="lightGlow" cx="50%" cy="25%" r="55%">
+      <stop offset="0%" stop-color="#CC8A2A" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#0D1F18" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="plateShadow">
+      <feDropShadow dx="0" dy="9" stdDeviation="13" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+
+  <!-- Overhead warm glow -->
+  <ellipse cx="400" cy="120" rx="350" ry="240" fill="url(#lightGlow)"/>
+
+  <!-- Plate shadow -->
+  <ellipse cx="400" cy="368" rx="215" ry="28" fill="#000000" opacity="0.45"/>
+
+  <!-- Plate -->
+  <ellipse cx="400" cy="315" rx="205" ry="205" fill="url(#plateGrad)" filter="url(#plateShadow)"/>
+  <ellipse cx="400" cy="315" rx="205" ry="205" fill="none" stroke="#2A2A2A" stroke-width="3"/>
+  <ellipse cx="400" cy="315" rx="196" ry="196" fill="none" stroke="#1A1A1A" stroke-width="1.5"/>
+
+  <!-- Toffee sauce pool on plate -->
+  <ellipse cx="400" cy="345" rx="140" ry="55" fill="url(#sauceGrad)" opacity="0.65"/>
+
+  <!-- Sticky toffee pudding (rounded dome shape) -->
+  <path d="M 290 330 Q 288 280 310 255 Q 335 228 380 222 Q 420 218 445 240 Q 470 262 472 302 Q 474 340 455 358 Q 430 375 395 378 Q 355 378 325 360 Q 298 345 290 330 Z"
+        fill="url(#puddingGrad)"/>
+
+  <!-- Pudding dome highlight (caramelised top) -->
+  <ellipse cx="385" cy="268" rx="62" ry="40" fill="#A06830" opacity="0.3" transform="rotate(-8, 385, 268)"/>
+
+  <!-- Sauce dripping down pudding -->
+  <path d="M 320 295 Q 308 318 306 340" stroke="#C8780A" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.6"/>
+  <path d="M 460 310 Q 468 335 466 355" stroke="#C8780A" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.55"/>
+  <path d="M 380 225 Q 370 240 365 262" stroke="#B06808" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.4"/>
+
+  <!-- Toffee sauce overflow on plate -->
+  <path d="M 295 340 Q 310 358 340 368 Q 370 376 400 376 Q 430 376 458 368 Q 480 360 490 345"
+        stroke="#C8780A" stroke-width="4" fill="none" opacity="0.45"/>
+
+  <!-- Cream / ice cream scoop (white dome to the side) -->
+  <ellipse cx="478" cy="298" rx="38" ry="30" fill="#F0ECE0" opacity="0.75"/>
+  <ellipse cx="470" cy="290" rx="16" ry="12" fill="#FFFFFF" opacity="0.35"/>
+  <!-- Cream drip onto sauce -->
+  <path d="M 478 328 Q 482 338 476 348" stroke="#E8E4D0" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.4"/>
+
+  <!-- Mint leaf garnish -->
+  <ellipse cx="310" cy="302" rx="12" ry="7" fill="#2E6A2A" transform="rotate(-30, 310, 302)"/>
+  <ellipse cx="296" cy="310" rx="10" ry="6" fill="#3A8034" transform="rotate(-50, 296, 310)"/>
+
+  <!-- Icing sugar dusting (tiny white dots) -->
+  <circle cx="360" cy="240" r="2" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="395" cy="232" r="1.5" fill="#FFFFFF" opacity="0.25"/>
+  <circle cx="420" cy="244" r="2" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="440" cy="258" r="1.5" fill="#FFFFFF" opacity="0.25"/>
+
+  <!-- Plate decorative ring -->
+  <ellipse cx="400" cy="315" rx="175" ry="175" fill="none" stroke="#C9A86A" stroke-width="0.8" opacity="0.18"/>
+
+  <!-- Label -->
+  <rect x="115" y="530" width="570" height="48" rx="4" fill="#122A1E" opacity="0.92"/>
+  <rect x="115" y="530" width="570" height="48" rx="4" fill="none" stroke="#C9A86A" stroke-width="1.2" opacity="0.6"/>
+  <text x="400" y="562" font-family="Georgia, 'Times New Roman', serif" font-size="19"
+        fill="#C9A86A" text-anchor="middle" letter-spacing="4" font-weight="bold">STICKY TOFFEE PUDDING</text>
+</svg>

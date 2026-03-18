@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#1C1810"/>
+      <stop offset="100%" stop-color="#0D1F18"/>
+    </radialGradient>
+    <radialGradient id="plateGrad" cx="42%" cy="36%" r="60%">
+      <stop offset="0%" stop-color="#1E1E1E"/>
+      <stop offset="100%" stop-color="#0C0C0C"/>
+    </radialGradient>
+    <radialGradient id="lambGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#8B5A2A"/>
+      <stop offset="50%" stop-color="#6B3C18"/>
+      <stop offset="100%" stop-color="#4A2408"/>
+    </radialGradient>
+    <radialGradient id="boneGrad" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#E8E0C8"/>
+      <stop offset="100%" stop-color="#C0B898"/>
+    </radialGradient>
+    <radialGradient id="lightGlow" cx="50%" cy="20%" r="55%">
+      <stop offset="0%" stop-color="#CC8A2A" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#0D1F18" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.65"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+
+  <!-- Warm overhead glow -->
+  <ellipse cx="400" cy="100" rx="360" ry="250" fill="url(#lightGlow)"/>
+
+  <!-- Plate shadow -->
+  <ellipse cx="400" cy="368" rx="218" ry="28" fill="#000000" opacity="0.45"/>
+
+  <!-- Plate -->
+  <ellipse cx="400" cy="315" rx="208" ry="208" fill="url(#plateGrad)" filter="url(#shadow)"/>
+  <ellipse cx="400" cy="315" rx="208" ry="208" fill="none" stroke="#2A2A2A" stroke-width="3.5"/>
+  <ellipse cx="400" cy="315" rx="199" ry="199" fill="none" stroke="#1A1A1A" stroke-width="1.5"/>
+
+  <!-- Braising sauce/jus pool on plate -->
+  <ellipse cx="400" cy="340" rx="130" ry="50" fill="#3A1E08" opacity="0.8"/>
+
+  <!-- Lamb shank - lower bone/handle shape -->
+  <rect x="420" y="220" width="22" height="130" rx="11" fill="url(#boneGrad)"/>
+  <!-- Bone highlight -->
+  <rect x="424" y="225" width="8" height="40" rx="4" fill="#FFFFFF" opacity="0.3"/>
+  <!-- Bone end cap knob -->
+  <ellipse cx="431" cy="216" rx="18" ry="14" fill="url(#boneGrad)"/>
+  <ellipse cx="431" cy="216" rx="10" ry="8" fill="#D0C8A8" opacity="0.5"/>
+
+  <!-- Lamb meat body (braised shank teardrop) -->
+  <path d="M 320 280 Q 295 260 310 230 Q 330 200 375 205 Q 420 210 435 250 Q 445 280 430 320 Q 415 360 380 370 Q 340 375 315 350 Q 295 325 320 280 Z"
+        fill="url(#lambGrad)"/>
+
+  <!-- Meat texture / braised surface highlights -->
+  <path d="M 330 225 Q 360 215 390 225 Q 405 232 408 248" stroke="#A06030" stroke-width="2.5" fill="none" opacity="0.45"/>
+  <path d="M 310 275 Q 305 310 320 340" stroke="#8B4A20" stroke-width="2" fill="none" opacity="0.35"/>
+  <path d="M 425 265 Q 440 295 430 330" stroke="#8B4A20" stroke-width="2" fill="none" opacity="0.35"/>
+
+  <!-- Meat sheen highlight -->
+  <ellipse cx="365" cy="260" rx="45" ry="28" fill="#B06830" opacity="0.3" transform="rotate(-15, 365, 260)"/>
+
+  <!-- Green herbs on top -->
+  <circle cx="350" cy="235" r="6" fill="#2E6A2A"/>
+  <circle cx="362" cy="228" r="5" fill="#3A8034"/>
+  <circle cx="340" cy="243" r="4" fill="#245A20"/>
+  <circle cx="372" cy="235" r="4" fill="#2E6A2A"/>
+
+  <!-- Sauce drizzle from shank -->
+  <path d="M 360 355 Q 380 370 400 360 Q 420 352 440 360" stroke="#5A2808" stroke-width="3" fill="none" opacity="0.5"/>
+
+  <!-- Mash potato suggestion (white oval blob) -->
+  <ellipse cx="330" cy="345" rx="45" ry="25" fill="#D4C89A" opacity="0.25"/>
+
+  <!-- Plate decorative ring -->
+  <ellipse cx="400" cy="315" rx="178" ry="178" fill="none" stroke="#C9A86A" stroke-width="0.8" opacity="0.2"/>
+
+  <!-- Label -->
+  <rect x="140" y="530" width="520" height="48" rx="4" fill="#122A1E" opacity="0.92"/>
+  <rect x="140" y="530" width="520" height="48" rx="4" fill="none" stroke="#C9A86A" stroke-width="1.2" opacity="0.6"/>
+  <text x="400" y="562" font-family="Georgia, 'Times New Roman', serif" font-size="20"
+        fill="#C9A86A" text-anchor="middle" letter-spacing="5" font-weight="bold">BRAISED LAMB SHANK</text>
+</svg>
