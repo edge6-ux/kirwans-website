@@ -76,7 +76,7 @@ export default function Hero({
             alt="Kirwan's logo"
             width={120}
             height={120}
-            className="mb-6 object-contain rounded-full md:-mt-24"
+            className="mb-6 object-contain rounded-full -mt-16 md:-mt-24"
             style={{ boxShadow: "0 0 0 1px #C9A86A, 0 0 40px rgba(201,168,106,0.45), 0 0 80px rgba(201,168,106,0.2)" }}
           />
 

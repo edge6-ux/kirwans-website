@@ -1,17 +1,7 @@
 import Hero from "@/components/Hero";
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
-import Image from "next/image";
-
-/* ─────────────────────────────────────────────
-   Featured Dishes data
-───────────────────────────────────────────── */
-const featuredDishes = [
-  { src: "/images/lambchop.webp",  alt: "Braised Irish lamb chop shepherd's pie"      },
-  { src: "/images/steakwine.webp", alt: "Kirwan's signature ribeye with wine pairing" },
-  { src: "/images/fishchips.webp", alt: "Traditional fish and chips"                  },
-  { src: "/images/crabcake.webp",  alt: "Crab cake starter with slaw and lime"        },
-];
+import FeaturedDishesCarousel from "@/components/FeaturedDishesCarousel";
 
 export default function HomePage() {
   return (
@@ -57,23 +47,7 @@ export default function HomePage() {
             </h2>
             <span className="block w-16 h-[3px] bg-[#0F5F3F] mx-auto mb-10" />
 
-            {/* Card row — horizontal scroll on mobile, full row on desktop */}
-            <div className="flex gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory scrollbar-hide md:overflow-x-visible px-4 md:px-0 pb-4 md:pb-0">
-              {featuredDishes.map((dish) => (
-                <div
-                  key={dish.src}
-                  className="snap-center min-w-[250px] h-[250px] flex-shrink-0 md:flex-1 md:min-w-0 md:h-64 relative rounded-xl overflow-hidden shadow-xl border border-[#C9A86A]/30 hover:scale-[1.03] transition-all duration-300 ease-out"
-                >
-                  <Image
-                    src={dish.src}
-                    alt={dish.alt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 250px, 25vw"
-                  />
-                </div>
-              ))}
-            </div>
+            <FeaturedDishesCarousel />
 
             {/* CTA */}
             <div className="text-center mt-10">
