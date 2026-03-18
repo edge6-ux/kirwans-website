@@ -52,72 +52,72 @@ export default function AboutPage() {
 
       {/* ── Section 1: Main Bar & Whiskey Bar ── */}
       <section className="bg-[#050608] py-20 px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-          {/* Images */}
-          <div className="space-y-6">
-            <div className="relative w-full h-[320px] md:h-[380px] overflow-hidden rounded-lg shadow-[0_8px_40px_rgba(0,0,0,0.6)] border border-[#C9A86A]/15">
-              <Image
-                src="/images/mainbar1.webp"
-                alt="Kirwan's main bar overlooking the Washington Channel"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="relative w-full h-[320px] md:h-[380px] overflow-hidden rounded-lg shadow-[0_8px_40px_rgba(0,0,0,0.6)] border border-[#C9A86A]/15">
-              <Image
-                src="/images/mainbar.webp"
-                alt="Whiskey bar interior"
-                fill
-                className="object-cover"
-              />
+        {/* Mobile layout — each area: title + description + image */}
+        <div className="md:hidden max-w-7xl mx-auto space-y-16">
+          <div>
+            <h2 className="text-3xl text-white/90 tracking-wide" style={{ fontFamily: "var(--font-playfair, Georgia, serif)" }}>
+              Main Bar &amp; Whiskey Bar
+            </h2>
+            <div className="mt-3 mb-6 h-px w-16 bg-[#C9A86A]/70" />
+            <h3 className="text-[#C9A86A] text-sm tracking-widest uppercase font-semibold mb-2" style={{ fontFamily: "var(--font-playfair, Georgia, serif)" }}>
+              Main Bar
+            </h3>
+            <p className="text-[#C7C7C7] text-base leading-relaxed mb-6">
+              Step inside Kirwan&apos;s and you&apos;re welcomed by our signature main bar — a warm,
+              lively gathering place overlooking the Washington Channel. The atmosphere is social
+              and inviting, with rich wood, soft lighting, and a timeless charm that sets the
+              tone for your visit.
+            </p>
+            <div className="relative w-full h-[280px] overflow-hidden rounded-lg shadow-[0_8px_40px_rgba(0,0,0,0.6)] border border-[#C9A86A]/15">
+              <Image src="/images/mainbar1.webp" alt="Kirwan's main bar overlooking the Washington Channel" fill className="object-cover" />
             </div>
           </div>
 
-          {/* Text */}
-          <div className="flex flex-col justify-start mt-4 md:mt-0">
-            <h2
-              className="text-3xl md:text-4xl text-white/90 tracking-wide"
-              style={{ fontFamily: "var(--font-playfair, Georgia, serif)" }}
-            >
+          <div>
+            <h3 className="text-[#C9A86A] text-sm tracking-widest uppercase font-semibold mb-2" style={{ fontFamily: "var(--font-playfair, Georgia, serif)" }}>
+              Whiskey Bar
+            </h3>
+            <p className="text-[#C7C7C7] text-base leading-relaxed mb-6">
+              Just beyond the main bar, you&apos;ll find our intimate Whiskey Bar — a refined
+              hideaway for those who appreciate craftsmanship and quiet luxury. Here, shelves are
+              lined with exceptional whiskeys from Ireland and beyond, curated for sipping,
+              savoring, and discovering something new.
+            </p>
+            <div className="relative w-full h-[280px] overflow-hidden rounded-lg shadow-[0_8px_40px_rgba(0,0,0,0.6)] border border-[#C9A86A]/15">
+              <Image src="/images/mainbar.webp" alt="Whiskey bar interior" fill className="object-cover" />
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop layout — unchanged */}
+        <div className="hidden md:grid max-w-7xl mx-auto grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <div className="relative w-full h-[380px] overflow-hidden rounded-lg shadow-[0_8px_40px_rgba(0,0,0,0.6)] border border-[#C9A86A]/15">
+              <Image src="/images/mainbar1.webp" alt="Kirwan's main bar overlooking the Washington Channel" fill className="object-cover" />
+            </div>
+            <div className="relative w-full h-[380px] overflow-hidden rounded-lg shadow-[0_8px_40px_rgba(0,0,0,0.6)] border border-[#C9A86A]/15">
+              <Image src="/images/mainbar.webp" alt="Whiskey bar interior" fill className="object-cover" />
+            </div>
+          </div>
+          <div className="flex flex-col justify-start">
+            <h2 className="text-4xl text-white/90 tracking-wide" style={{ fontFamily: "var(--font-playfair, Georgia, serif)" }}>
               Main Bar &amp; Whiskey Bar
             </h2>
             <div className="mt-3 mb-8 h-px w-16 bg-[#C9A86A]/70" />
-
             <div className="space-y-6 text-[#C7C7C7] text-base leading-relaxed">
               <div>
-                <h3
-                  className="text-[#C9A86A] text-sm tracking-widest uppercase font-semibold mb-2"
-                  style={{ fontFamily: "var(--font-playfair, Georgia, serif)" }}
-                >
-                  Main Bar
-                </h3>
-                <p>
-                  Step inside Kirwan&apos;s and you&apos;re welcomed by our signature main bar — a warm,
-                  lively gathering place overlooking the Washington Channel. The atmosphere is social
-                  and inviting, with rich wood, soft lighting, and a timeless charm that sets the
-                  tone for your visit.
-                </p>
+                <h3 className="text-[#C9A86A] text-sm tracking-widest uppercase font-semibold mb-2" style={{ fontFamily: "var(--font-playfair, Georgia, serif)" }}>Main Bar</h3>
+                <p>Step inside Kirwan&apos;s and you&apos;re welcomed by our signature main bar — a warm, lively gathering place overlooking the Washington Channel. The atmosphere is social and inviting, with rich wood, soft lighting, and a timeless charm that sets the tone for your visit.</p>
               </div>
-
               <div>
-                <h3
-                  className="text-[#C9A86A] text-sm tracking-widest uppercase font-semibold mb-2"
-                  style={{ fontFamily: "var(--font-playfair, Georgia, serif)" }}
-                >
-                  Whiskey Bar
-                </h3>
-                <p>
-                  Just beyond the main bar, you&apos;ll find our intimate Whiskey Bar — a refined
-                  hideaway for those who appreciate craftsmanship and quiet luxury. Here, shelves are
-                  lined with exceptional whiskeys from Ireland and beyond, curated for sipping,
-                  savoring, and discovering something new.
-                </p>
+                <h3 className="text-[#C9A86A] text-sm tracking-widest uppercase font-semibold mb-2" style={{ fontFamily: "var(--font-playfair, Georgia, serif)" }}>Whiskey Bar</h3>
+                <p>Just beyond the main bar, you&apos;ll find our intimate Whiskey Bar — a refined hideaway for those who appreciate craftsmanship and quiet luxury. Here, shelves are lined with exceptional whiskeys from Ireland and beyond, curated for sipping, savoring, and discovering something new.</p>
               </div>
             </div>
           </div>
-
         </div>
+
       </section>
       {/* ── Section 2: Gastropub: Dining Area & Snug ── */}
       <section className="bg-[#050608] py-20 px-6 lg:px-8">
@@ -159,7 +159,7 @@ export default function AboutPage() {
 
           {/* Subsection: The Snug — text left, image right */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="flex flex-col justify-center md:order-1 order-2">
+            <div className="flex flex-col justify-center order-1">
               <h3
                 className="text-3xl md:text-4xl text-white/90 tracking-wide"
                 style={{ fontFamily: "var(--font-playfair, Georgia, serif)" }}
@@ -176,7 +176,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="relative h-[420px] overflow-hidden rounded-lg shadow-[0_8px_40px_rgba(0,0,0,0.6)] border border-[#C9A86A]/15 md:order-2 order-1">
+            <div className="relative h-[420px] overflow-hidden rounded-lg shadow-[0_8px_40px_rgba(0,0,0,0.6)] border border-[#C9A86A]/15 order-2">
               <Image
                 src="/images/gastropub-snug.webp"
                 alt="The snug at Kirwan's — an intimate enclosed room"
