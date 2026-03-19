@@ -1,15 +1,4 @@
-// ── Data ─────────────────────────────────────────────────────────────────────
-
-const kidsItems = [
-  { name: "Chicken Tenders & Fries",    description: "Classic crispy tenders served with golden fries."                       },
-  { name: "Mini Fish N' Chips",         description: "Kid-sized portion of our signature beer-battered cod with fries."       },
-  { name: "Mac N' Cheese",              description: "Creamy, kid-friendly macaroni and cheese."                              },
-  { name: "Bowtie Pasta",               description: "Served with marinara sauce or butter."                                  },
-  { name: "Grilled Cheese w/ Irish Cheddar", description: "Toasted sandwich with rich Irish cheddar."                        },
-  { name: "Cheese Flatbread",           description: "Warm flatbread topped with melted cheese."                              },
-];
-
-// ── Component ─────────────────────────────────────────────────────────────────
+import { kidsItems } from "@/data/menus";
 
 export default function KidsMenu() {
   return (

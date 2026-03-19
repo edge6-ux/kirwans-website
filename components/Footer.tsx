@@ -33,7 +33,7 @@ export default function Footer() {
             />
           </Link>
           <p className="text-[#C7C7C7] text-sm leading-relaxed mb-6">
-            An authentic Irish pub & restaurant bringing the warmth of Dublin
+            An authentic Irish pub & restaurant bringing the spirit of Ireland
             to the heart of Washington D.C.
           </p>
           {/* Social icons */}

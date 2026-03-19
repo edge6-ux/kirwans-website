@@ -17,6 +17,7 @@ export default function ContactForm() {
   const [form,       setForm]       = useState<FormState>(INITIAL);
   const [submitted,  setSubmitted]  = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [error,      setError]      = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -25,9 +26,20 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    setSubmitted(true);
-    setSubmitting(false);
+    setError(false);
+    try {
+      const res = await fetch("/api/contact", {
+        method:  "POST",
+        headers: { "Content-Type": "application/json" },
+        body:    JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error();
+      setSubmitted(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -125,6 +137,13 @@ export default function ContactForm() {
           className={`${inputClasses} resize-none`}
         />
       </div>
+
+      {error && (
+        <p className="text-sm text-red-400">
+          Something went wrong — please try again or email us directly at{" "}
+          <a href="mailto:hello@kirwansdc.com" className="underline">hello@kirwansdc.com</a>.
+        </p>
+      )}
 
       <Button
         type="submit"

@@ -67,12 +67,12 @@ export default function ContactPage() {
         subtitle="We're in the heart of D.C. — come find us, or reach out and we'll find you."
         size="half"
         overlayOpacity={0.72}
-        cursiveTitleGold
+        cursiveTitle
       />
 
       {/* Hours + Address */}
       <SectionWrapper bg="dark">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
 
           {/* Hours */}
           <div className="lg:col-span-1 space-y-10">
@@ -181,6 +181,20 @@ export default function ContactPage() {
             </address>
           </div>
 
+        </div>
+
+        {/* Map */}
+        <div className="border border-[#C9A86A]/20 overflow-hidden">
+          <iframe
+            src="https://maps.google.com/maps?q=749+Wharf+St+SW,+Washington,+DC+20024&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="420"
+            style={{ border: 0, display: "block" }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Kirwan's on the Wharf location"
+          />
         </div>
       </SectionWrapper>
 

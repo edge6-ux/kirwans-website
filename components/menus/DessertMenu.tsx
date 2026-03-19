@@ -1,46 +1,4 @@
-// ── Data ─────────────────────────────────────────────────────────────────────
-
-interface DessertItem {
-  name: string;
-  description: string;
-  price: string;
-  dietary?: string;
-}
-
-const dessertItems: DessertItem[] = [
-  {
-    name: "Chocolate Brownie",
-    dietary: "GF V",
-    price: "14",
-    description: "Warm chocolate brownie topped with caramel sauce, candied walnuts, and vanilla ice cream.",
-  },
-  {
-    name: "Guinness Tiramisu",
-    dietary: "V",
-    price: "14",
-    description: "Layers of mascarpone cream infused with Guinness and finished with cocoa powder.",
-  },
-  {
-    name: "Bread Pudding",
-    dietary: "V",
-    price: "14",
-    description: "Classic bread pudding with Baileys, raisins, caramel sauce, and vanilla ice cream.",
-  },
-  {
-    name: "Mini Lemon Tarts",
-    dietary: "V",
-    price: "14",
-    description: "Bright lemon tarts with orange glaze, caramel drizzle, and toasted meringue.",
-  },
-  {
-    name: "Homemade Profiteroles",
-    dietary: "V",
-    price: "14",
-    description: "Light pastry filled with cream, served with chocolate sauce and fresh berries.",
-  },
-];
-
-// ── Component ─────────────────────────────────────────────────────────────────
+import { dessertItems } from "@/data/menus";
 
 export default function DessertMenu() {
   return (
