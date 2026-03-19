@@ -82,7 +82,7 @@ export default function Footer() {
 
         {/* Hours */}
         <div>
-          <h4 className="section-label mb-5">Hours</h4>
+          <h4 className="section-label mb-5">Bar Hours</h4>
           <ul className="space-y-3">
             {hours.map(({ day, time }) => (
               <li key={day} className="text-sm">
@@ -91,6 +91,10 @@ export default function Footer() {
               </li>
             ))}
           </ul>
+          <p className="mt-4 text-xs text-[#8A7D6E] leading-relaxed">
+            Kitchen open until 10 PM nightly.<br />
+            Late night dining until 12 AM (1:30 AM Fri &amp; Sat).
+          </p>
         </div>
 
         {/* Contact */}
