@@ -26,9 +26,32 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://kirwansdc.com"),
   title: "Kirwan's | Irish Pub & Restaurant | Washington D.C.",
   description:
     "Experience authentic Irish hospitality at Kirwan's — an upscale pub & restaurant in the heart of Washington D.C. Fine Irish fare, premium whiskeys, and craft pints.",
+  openGraph: {
+    type: "website",
+    siteName: "Kirwan's on the Wharf",
+    title: "Kirwan's | Irish Pub & Restaurant | Washington D.C.",
+    description:
+      "Experience authentic Irish hospitality at Kirwan's — an upscale pub & restaurant in the heart of Washington D.C. Fine Irish fare, premium whiskeys, and craft pints.",
+    images: [
+      {
+        url: "/images/hero2.webp",
+        width: 1200,
+        height: 630,
+        alt: "Kirwan's on the Wharf — Washington D.C.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kirwan's | Irish Pub & Restaurant | Washington D.C.",
+    description:
+      "Experience authentic Irish hospitality at Kirwan's on the Wharf — fine Irish fare, premium whiskeys, and craft pints.",
+    images: ["/images/hero2.webp"],
+  },
 };
 
 export default function RootLayout({
