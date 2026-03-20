@@ -102,12 +102,25 @@ export default function Hero({
             <span className="block h-[1px] w-12 md:w-20 bg-[#C9A86A]/50" />
           </div>
 
-          {/* Celtic triquetra ornament */}
+          {/* Four-leaf clover ornament */}
           <div className="hero-enter [animation-delay:0.45s] mb-5" aria-hidden="true">
-            <svg width="54" height="52" viewBox="-2 0 56 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="25" cy="18" r="18" stroke="#C9A86A" strokeWidth="1.2" opacity="0.75" />
-              <circle cx="16" cy="34" r="18" stroke="#C9A86A" strokeWidth="1.2" opacity="0.75" />
-              <circle cx="34" cy="34" r="18" stroke="#C9A86A" strokeWidth="1.2" opacity="0.75" />
+            <svg width="60" height="64" viewBox="-2 -2 64 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {/* Top leaf */}
+              <path d="M30 26 C23 23,16 13,20 6 C22 1,28 0,30 5 C32 0,38 1,40 6 C44 13,37 23,30 26 Z"
+                stroke="#C9A86A" strokeWidth="1.3" fill="rgba(201,168,106,0.12)" />
+              {/* Right leaf */}
+              <path d="M30 26 C33 19,43 12,50 16 C55 18,56 24,51 26 C56 28,55 34,50 36 C43 40,33 33,30 26 Z"
+                stroke="#C9A86A" strokeWidth="1.3" fill="rgba(201,168,106,0.12)" />
+              {/* Bottom leaf */}
+              <path d="M30 26 C37 29,44 39,40 46 C38 51,32 52,30 47 C28 52,22 51,20 46 C16 39,23 29,30 26 Z"
+                stroke="#C9A86A" strokeWidth="1.3" fill="rgba(201,168,106,0.12)" />
+              {/* Left leaf */}
+              <path d="M30 26 C27 33,17 40,10 36 C5 34,4 28,9 26 C4 24,5 18,10 16 C17 12,27 19,30 26 Z"
+                stroke="#C9A86A" strokeWidth="1.3" fill="rgba(201,168,106,0.12)" />
+              {/* Center */}
+              <circle cx="30" cy="26" r="2.5" fill="#C9A86A" opacity="0.85" />
+              {/* Stem */}
+              <path d="M30 42 Q26 53,28 62" stroke="#C9A86A" strokeWidth="1.2" strokeLinecap="round" opacity="0.7" />
             </svg>
           </div>
 
