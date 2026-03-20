@@ -154,10 +154,10 @@ export default function ContactPage() {
               <div>
                 <p className="text-[#C9A86A] text-xs tracking-widest uppercase font-semibold mb-1">Phone</p>
                 <a
-                  href="tel:+12025550192"
+                  href="tel:+12025543818"
                   className="text-[#F5F5F5] hover:text-[#C9A86A] transition-colors"
                 >
-                  (202) 555-0192
+                  (202) 554-3818
                 </a>
               </div>
               <div>

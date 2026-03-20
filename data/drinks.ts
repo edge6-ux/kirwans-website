@@ -2,12 +2,13 @@
 
 export interface DrinkItem {
   name: string;
-  price: string;
+  price?: string;
   note?: string; // origin, description, or blend info
 }
 
 export interface DrinkSubGroup {
   title: string;
+  price?: string;
   items: DrinkItem[];
 }
 
@@ -502,6 +503,317 @@ export const cansSection: DrinkSection = {
         { name: "Lagunitas IPA",       price: "7" },
         { name: "Guinness 0.0",        price: "6", note: "Non-Alcoholic" },
         { name: "Heineken 0.0",        price: "6", note: "Non-Alcoholic" },
+      ],
+    },
+  ],
+};
+
+// ── Bourbon / Rye ─────────────────────────────────────────────────────────────
+
+export const bournonRyeSection: DrinkSection = {
+  id: "bourbon-rye",
+  title: "Bourbon / Rye",
+  groups: [
+    {
+      title: "Brown-Forman Distillery — Louisville, KY",
+      items: [
+        { name: "Old Forester 1870",           price: "15"  },
+        { name: "Old Forester 1897",           price: "15"  },
+        { name: "Old Forester 1910",           price: "16"  },
+        { name: "Old Forester 1920",           price: "16"  },
+        { name: "Old Forester 86 Proof",       price: "10"  },
+        { name: "Old Forester Birthday Bourbon", price: "150" },
+        { name: "Old Forester Rye",            price: "10"  },
+        { name: "Old Forester Statesman",      price: "16"  },
+      ],
+    },
+    {
+      title: "Buffalo Trace Distillery — Frankfort, KY",
+      items: [
+        { name: "Buffalo Trace",                    price: "16"  },
+        { name: "Blanton's",                        price: "18"  },
+        { name: "Blanton's Gold",                   price: "60"  },
+        { name: "Blanton's Straight From the Barrel", price: "70" },
+        { name: "Colonel E.H. Taylor Small Batch",  price: "25"  },
+        { name: "Eagle Rare 10yr",                  price: "16"  },
+        { name: "Elmer T. Lee 10yr",                price: "75"  },
+        { name: "George T. Stagg",                  price: "75"  },
+        { name: "Old Rip Van Winkle 10yr",          price: "90"  },
+        { name: "Van Winkle 12yr",                  price: "120" },
+        { name: "Van Winkle 13yr Rye",              price: "200" },
+        { name: "Sazerac Rye",                      price: "16"  },
+        { name: "Thomas Handy Sazerac Rye",         price: "70"  },
+        { name: "Weller's 12yr",                    price: "70"  },
+        { name: "Weller's Antique 107",             price: "25"  },
+        { name: "Weller's C.Y.P.B.",                price: "35"  },
+        { name: "Weller's Full Proof",              price: "18"  },
+        { name: "Weller's Special Reserve",         price: "18"  },
+        { name: "William Larue Weller",             price: "120" },
+      ],
+    },
+    {
+      title: "Bulleit Distillery — Louisville, KY",
+      items: [
+        { name: "Bulleit",     price: "10" },
+        { name: "Bulleit Rye", price: "10" },
+      ],
+    },
+    {
+      title: "Four Roses Distillery — Lawrenceburg, KY",
+      items: [
+        { name: "Four Roses Single Barrel", price: "12" },
+      ],
+    },
+    {
+      title: "Heaven Hill Distillery — Louisville, KY",
+      items: [
+        { name: "Elijah Craig Small Batch", price: "10" },
+      ],
+    },
+    {
+      title: "High West Distillery — Park City, UT",
+      items: [
+        { name: "High West Prairie",    price: "12" },
+        { name: "High West Double Rye", price: "12" },
+      ],
+    },
+    {
+      title: "Jack Daniel's Distillery — Lynchburg, TN",
+      items: [
+        { name: "Gentleman Jack",            price: "12" },
+        { name: "Jack Daniel's Original",    price: "10" },
+        { name: "Jack Daniel's Bonded",      price: "12" },
+        { name: "Jack Daniel's Single Barrel", price: "14" },
+        { name: "Jack Daniel's Rye",         price: "14" },
+        { name: "Jack Daniel's Triple Mash", price: "12" },
+        { name: "Jack Daniel's Honey",       price: "12" },
+      ],
+    },
+    {
+      title: "Jim Beam Brand Distilling — Frankfort, KY",
+      items: [
+        { name: "Basil Hayden",                price: "12" },
+        { name: "Basil Hayden 10yr",           price: "16" },
+        { name: "Basil Hayden Dark Rye",       price: "14" },
+        { name: "Basil Hayden Malted Rye",     price: "14" },
+        { name: "Basil Hayden Red Wine Finish", price: "14" },
+        { name: "Basil Hayden Toasted Rye",    price: "14" },
+        { name: "Booker's",                    price: "22" },
+        { name: "Jim Beam Original",           price: "10" },
+        { name: "Jim Beam Black",              price: "12" },
+        { name: "Knob Creek 7yr Rye",          price: "12" },
+        { name: "Knob Creek 9yr",              price: "12" },
+        { name: "Little Book",                 price: "36" },
+        { name: "Old Overholt Rye",            price: "10" },
+      ],
+    },
+    {
+      title: "Louisville Spirits — Bardstown, KY",
+      items: [
+        { name: "Angel's Envy",     price: "12" },
+        { name: "Angel's Envy Rye", price: "20" },
+      ],
+    },
+    {
+      title: "Maker's Mark Distillery — Loretto, KY",
+      items: [
+        { name: "Maker's 46",  price: "14" },
+        { name: "Maker's Mark", price: "12" },
+      ],
+    },
+    {
+      title: "McLain & Kyne Distillery — Louisville, KY",
+      items: [
+        { name: "Jefferson's",           price: "12" },
+        { name: "Jefferson's Ocean",     price: "16" },
+        { name: "Jefferson's Ocean Rye", price: "16" },
+        { name: "Jefferson's Reserve",   price: "14" },
+        { name: "Jefferson's Tropics",   price: "18" },
+      ],
+    },
+    {
+      title: "Michter's Distillery — Louisville, KY",
+      items: [
+        { name: "Michter's",     price: "14" },
+        { name: "Michter's Rye", price: "14" },
+      ],
+    },
+    {
+      title: "Nearest Green Distillery — Shelbyville, TN",
+      items: [
+        { name: "Uncle Nearest 1856", price: "16" },
+        { name: "Uncle Nearest 1884", price: "12" },
+      ],
+    },
+    {
+      title: "Rabbit Hole Distillery — Louisville, KY",
+      items: [
+        { name: "Rabbit Hole Boxergrail Rye", price: "14" },
+        { name: "Rabbit Hole Dareringer",     price: "16" },
+      ],
+    },
+    {
+      title: "Sagamore Spirit Distillery — Baltimore, MD",
+      items: [
+        { name: "Sagamore Rye 83", price: "10" },
+      ],
+    },
+    {
+      title: "Smooth Ambler Distillery — Greenbrier, WV",
+      items: [
+        { name: "Smooth Ambler Old Scout", price: "10" },
+      ],
+    },
+    {
+      title: "Stranahan's Distillery — Denver, CO",
+      items: [
+        { name: "Stranahan's Original",    price: "12" },
+        { name: "Stranahan's Sherry Cask", price: "14" },
+        { name: "Stranahan's Blue Peak",   price: "14" },
+      ],
+    },
+    {
+      title: "Tin Cup Distillery — Denver, CO",
+      items: [
+        { name: "Tin Cup",      price: "10" },
+        { name: "Tin Cup 10yr", price: "14" },
+        { name: "Tin Cup Rye",  price: "10" },
+      ],
+    },
+    {
+      title: "Tuthilltown Distillery — Hudson Valley, NY",
+      items: [
+        { name: "Hudson Bright Lights, Big Bourbon", price: "12" },
+        { name: "Hudson Do The Rye Thing",           price: "12" },
+        { name: "Hudson Short Stack Maple Rye",      price: "12" },
+      ],
+    },
+    {
+      title: "Westland Distillery — Seattle, WA",
+      items: [
+        { name: "Westland Single Malt",         price: "18" },
+        { name: "Westland Single Malt Colore",  price: "35" },
+        { name: "Westland Single Malt Garryana", price: "35" },
+        { name: "Westland Single Malt Peated",  price: "18" },
+        { name: "Westland Single Malt Sherry",  price: "18" },
+        { name: "Westland Single Malt Solum",   price: "35" },
+      ],
+    },
+    {
+      title: "WhistlePig Farm Distillery — Shoreham, VT",
+      items: [
+        { name: "WhistlePig 10yr",        price: "14"  },
+        { name: "WhistlePig Farmstock Rye", price: "18" },
+        { name: "WhistlePig The Boss Hog", price: "100" },
+      ],
+    },
+    {
+      title: "Wild Turkey Distilling Co. — Lawrenceburg, KY",
+      items: [
+        { name: "Wild Turkey 101",       price: "10" },
+        { name: "Wild Turkey Rare Breed", price: "16" },
+      ],
+    },
+    {
+      title: "Woodford Reserve Distillery — Versailles, KY",
+      items: [
+        { name: "Woodford Double Oak",   price: "14" },
+        { name: "Woodford Reserve",      price: "14" },
+        { name: "Woodford Reserve Rye",  price: "14" },
+      ],
+    },
+    {
+      title: "Woodinville Whiskey Co. — Woodinville, WA",
+      items: [
+        { name: "Woodinville Bourbon",      price: "12" },
+        { name: "Woodinville Moscatel",     price: "18" },
+        { name: "Woodinville Port Finish",  price: "16" },
+        { name: "Woodinville Rye",          price: "12" },
+      ],
+    },
+  ],
+};
+
+// ── Canadian / Japanese Whiskey ───────────────────────────────────────────────
+
+export const canadianJapaneseSection: DrinkSection = {
+  id: "canadian-japanese",
+  title: "Canadian / Japanese Whiskey",
+  groups: [
+    {
+      title: "Canadian",
+      items: [
+        { name: "Canadian Club", price: "10" },
+        { name: "Crown Royal",   price: "10" },
+        { name: "Crown Royal Apple", price: "10" },
+        { name: "Seagram's 7",   price: "10" },
+        { name: "Seagram's VO",  price: "10" },
+      ],
+    },
+    {
+      title: "Japanese",
+      items: [
+        { name: "Hibiki Harmony",            price: "26" },
+        { name: "Nikka Coffey Grain",        price: "20" },
+        { name: "Nikka Days",                price: "12" },
+        { name: "Nikka from the Barrel",     price: "20" },
+        { name: "Suntory Toki",              price: "12" },
+        { name: "Yamazaki 12yr",             price: "42" },
+        { name: "Yamazaki Distiller's Reserve", price: "22" },
+      ],
+    },
+  ],
+};
+
+// ── Whiskey Flights ───────────────────────────────────────────────────────────
+
+export const whiskeyFlightsSection: DrinkSection = {
+  id: "whiskey-flights",
+  title: "Whiskey Flights",
+  groups: [
+    {
+      title: "Caribbean Cruise",
+      price: "25",
+      items: [
+        { name: "Balvenie 14yr Caribbean Cask" },
+        { name: "Angel's Envy Rye Caribbean Cask" },
+        { name: "Tullamore DEW Caribbean Cask" },
+      ],
+    },
+    {
+      title: "Spot of Green",
+      price: "40",
+      items: [
+        { name: "Green Spot" },
+        { name: "Green Spot Château Léoville Barton" },
+        { name: "Green Spot Château Montelena" },
+      ],
+    },
+    {
+      title: "The Robin",
+      price: "70",
+      items: [
+        { name: "Redbreast 12yr" },
+        { name: "Redbreast 18yr" },
+        { name: "Redbreast 21yr" },
+      ],
+    },
+    {
+      title: "Mark's \"One For The Road\"",
+      price: "100",
+      items: [
+        { name: "Red Spot" },
+        { name: "Redbreast Tawny Port Cask" },
+        { name: "Midleton Barry Crockett" },
+      ],
+    },
+    {
+      title: "The Celtic Tiger",
+      price: "240",
+      items: [
+        { name: "Van Winkle 13yr Rye" },
+        { name: "Redbreast 27yr" },
+        { name: "Macallan 18yr" },
       ],
     },
   ],

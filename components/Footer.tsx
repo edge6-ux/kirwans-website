@@ -104,8 +104,8 @@ export default function Footer() {
             <p className="text-[#F5F5F5]">749 Wharf Street SW</p>
             <p>Washington, DC 20024</p>
             <p className="mt-4">
-              <a href="tel:+12025550192" className="hover:text-[#C9A86A] transition-colors">
-                (202) 555-0192
+              <a href="tel:+12025543818" className="hover:text-[#C9A86A] transition-colors">
+                (202) 554-3818
               </a>
             </p>
             <p>
@@ -121,7 +121,7 @@ export default function Footer() {
       <div className="border-t border-[#1C1C1E]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-[#C7C7C7]/50 text-xs tracking-wide">
-            © {new Date().getFullYear()} Kirwan&#39;s Irish Pub & Restaurant. All rights reserved.
+            © {new Date().getFullYear()} Kirwan&#39;s on the Wharf. All rights reserved.
           </p>
           <p className="text-[#C7C7C7]/50 text-xs tracking-wide">
             Washington D.C. · Est. 2018

@@ -43,7 +43,7 @@ export default function Hero({
   return (
     <div className={`relative ${heightClass} flex items-center justify-center overflow-hidden`}>
 
-      {/* Background image */}
+      {/* Background image with Ken Burns */}
       <div
         className="absolute inset-0 bg-center bg-cover animate-ken-burns"
         style={{ backgroundImage: `url(${imageSrc})` }}
@@ -54,7 +54,16 @@ export default function Hero({
       <div
         className="absolute inset-0"
         style={{
-          background: `linear-gradient(to bottom, rgba(11,11,12,${overlayOpacity}) 0%, rgba(11,11,12,0.88) 100%)`,
+          background: `linear-gradient(to bottom, rgba(11,11,12,${overlayOpacity}) 0%, rgba(11,11,12,0.92) 100%)`,
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Vignette — darkens edges, focuses center */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: "radial-gradient(ellipse 75% 75% at 50% 50%, transparent 40%, rgba(11,11,12,0.75) 100%)",
         }}
         aria-hidden="true"
       />
@@ -66,49 +75,64 @@ export default function Hero({
         aria-hidden="true"
       />
 
-      {/* Content — soft variant: anchored to bottom */}
+      {/* ── Soft variant: homepage hero ── */}
       {headlineVariant === "soft" ? (
-        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6 animate-fade-in-up">
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6">
 
           {/* Logo */}
-          <Image
-            src="/images/logo.webp"
-            alt="Kirwan's logo"
-            width={120}
-            height={120}
-            className="mb-6 object-contain rounded-full -mt-16 md:-mt-24"
-            style={{ boxShadow: "0 0 0 1px #C9A86A, 0 0 40px rgba(201,168,106,0.45), 0 0 80px rgba(201,168,106,0.2)" }}
-          />
+          <div className="hero-enter [animation-delay:0s] mb-7 -mt-16 md:-mt-24">
+            <Image
+              src="/images/logo.webp"
+              alt="Kirwan's logo"
+              width={120}
+              height={120}
+              className="object-contain rounded-full"
+              style={{
+                boxShadow: "0 0 0 1px #C9A86A, 0 0 40px rgba(201,168,106,0.45), 0 0 80px rgba(201,168,106,0.2)",
+              }}
+            />
+          </div>
 
-          {/* Three-line typographic lockup */}
-          <div className="flex flex-col items-center gap-1 text-center">
-            {/* Eyebrow */}
-            <p className="text-base md:text-xl tracking-[0.3em] uppercase text-white/50 font-bold">
+          {/* Eyebrow with decorative flanking lines */}
+          <div className="hero-enter [animation-delay:0.3s] flex items-center gap-4 mb-5">
+            <span className="block h-[1px] w-12 md:w-20 bg-[#C9A86A]/50" />
+            <p className="text-[0.65rem] md:text-[0.7rem] tracking-[0.35em] uppercase text-[#C9A86A]/80 font-semibold whitespace-nowrap">
               Kirwan&apos;s on the Wharf
             </p>
-
-            {/* Main line */}
-            <h1
-              className="text-5xl md:text-8xl font-normal mt-4 md:mt-8"
-              style={{
-                fontFamily: "var(--font-great-vibes, cursive)",
-                color: "rgba(255,255,255,0.85)",
-                WebkitTextStroke: "0.5px #C9A86A",
-                textShadow: "0 0 40px rgba(201,168,106,0.45), 0 0 80px rgba(201,168,106,0.2)",
-              }}
-            >
-              A Taste of Ireland
-            </h1>
-
-            {/* Subline */}
-            <p className="text-lg md:text-2xl text-white/65 mt-3">
-              On the Waterfront
-            </p>
+            <span className="block h-[1px] w-12 md:w-20 bg-[#C9A86A]/50" />
           </div>
+
+          {/* Celtic triquetra ornament */}
+          <div className="hero-enter [animation-delay:0.45s] mb-5" aria-hidden="true">
+            <svg width="54" height="52" viewBox="-2 0 56 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="25" cy="18" r="18" stroke="#C9A86A" strokeWidth="1.2" opacity="0.75" />
+              <circle cx="16" cy="34" r="18" stroke="#C9A86A" strokeWidth="1.2" opacity="0.75" />
+              <circle cx="34" cy="34" r="18" stroke="#C9A86A" strokeWidth="1.2" opacity="0.75" />
+            </svg>
+          </div>
+
+          {/* Main cursive title */}
+          <h1
+            className="hero-enter [animation-delay:0.65s] text-center font-normal leading-none mb-4"
+            style={{
+              fontFamily: "var(--font-great-vibes, cursive)",
+              fontSize: "clamp(3.5rem, 10vw, 8rem)",
+              color: "rgba(255,255,255,0.88)",
+              WebkitTextStroke: "0.5px #C9A86A",
+              textShadow: "0 0 60px rgba(201,168,106,0.5), 0 0 120px rgba(201,168,106,0.2)",
+            }}
+          >
+            A Taste of Ireland
+          </h1>
+
+          {/* Subline */}
+          <p className="hero-enter [animation-delay:0.9s] text-base md:text-xl tracking-[0.2em] uppercase text-white/45 font-light mb-10">
+            On the Waterfront
+          </p>
 
           {/* Buttons */}
           {(ctaText || secondaryCtaText) && (
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8 md:mt-12">
+            <div className="hero-enter [animation-delay:1.15s] flex flex-col sm:flex-row gap-4 justify-center items-center">
               {ctaText && (
                 <Button href={ctaHref} size="lg">{ctaText}</Button>
               )}
@@ -119,7 +143,7 @@ export default function Hero({
           )}
         </div>
       ) : (
-        /* Content — gold variant: centered */
+        /* ── Gold variant: interior pages ── */
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto animate-fade-in-up">
           {label && (
             <p className="section-label mb-4">{label}</p>
@@ -185,16 +209,25 @@ export default function Hero({
 
       {/* Bottom fade */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-32"
+        className="absolute bottom-0 left-0 right-0 h-40"
         style={{ background: "linear-gradient(to top, #0B0B0C 0%, transparent 100%)" }}
         aria-hidden="true"
       />
 
       {/* Scroll indicator */}
       {size === "full" && (
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-60">
-          <span className="text-[#C9A86A] text-[0.6rem] tracking-widest uppercase">Scroll</span>
-          <span className="block w-[1px] h-8 bg-[#C9A86A]/50 animate-[bounce_2s_infinite]" />
+        <div className="hero-enter [animation-delay:1.4s] absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
+          <span className="text-[0.6rem] tracking-[0.3em] uppercase text-[#C9A86A]/60">Scroll</span>
+          <svg
+            className="animate-chevron text-[#C9A86A]"
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path d="M3 6L9 12L15 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
         </div>
       )}
     </div>
